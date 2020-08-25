@@ -63,6 +63,6 @@ public class Solution {
 
         int[] nums = {1, 1, 1, 2, 2, 3};
         int k = 2;
-        printList((new Solution()).topKFrequent(nums, k));
+        printList((new com.jd.structures.L14HashTable.L05HashTableImplementation.Solution()).topKFrequent(nums, k));
     }
 }

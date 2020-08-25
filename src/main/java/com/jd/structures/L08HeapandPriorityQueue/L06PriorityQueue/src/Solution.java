@@ -154,7 +154,7 @@ class Solution {
         public String toString(){
 
             StringBuilder res = new StringBuilder();
-            res.append(String.format("Array: size = %d , capacity = %d\n", size, data.length));
+            res.append(String.format("com.jd.structures.L02Arrays.L02CreateOurOwnArray.com.jd.structures.L02Arrays.L03AddElementinArray.com.jd.structures.L02Arrays.L04QueryandUpdateElement.com.jd.structures.L02Arrays.L05ContainFindandRemove.com.jd.structures.L02Arrays.L06GenericDataStructures.Array: size = %d , capacity = %d\n", size, data.length));
             res.append('[');
             for(int i = 0 ; i < size ; i ++){
                 res.append(data[i]);
@@ -379,6 +379,6 @@ class Solution {
 
         int[] nums = {1, 1, 1, 2, 2, 3};
         int k = 2;
-        printList((new Solution()).topKFrequent(nums, k));
+        printList((new com.jd.structures.L14HashTable.L05HashTableImplementation.Solution()).topKFrequent(nums, k));
     }
 }

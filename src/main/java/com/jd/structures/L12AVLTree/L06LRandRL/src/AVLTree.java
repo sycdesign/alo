@@ -1,3 +1,5 @@
+import com.jd.structures.L14HashTable.L05HashTableImplementation.FileOperation;
+
 import java.util.ArrayList;
 
 public class AVLTree<K extends Comparable<K>, V> {
@@ -296,7 +298,7 @@ public class AVLTree<K extends Comparable<K>, V> {
         if(FileOperation.readFile("pride-and-prejudice.txt", words)) {
             System.out.println("Total words: " + words.size());
 
-            AVLTree<String, Integer> map = new AVLTree<>();
+            com.jd.structures.L14HashTable.L05HashTableImplementation.AVLTree<String, Integer> map = new com.jd.structures.L14HashTable.L05HashTableImplementation.AVLTree<>();
             for (String word : words) {
                 if (map.contains(word))
                     map.set(word, map.get(word) + 1);

@@ -1,3 +1,5 @@
+import com.jd.structures.L03StacksandQueues.L05ArrayQueue.Queue;
+
 public class PriorityQueue<E extends Comparable<E>> implements Queue<E> {
 
     private MaxHeap<E> maxHeap;

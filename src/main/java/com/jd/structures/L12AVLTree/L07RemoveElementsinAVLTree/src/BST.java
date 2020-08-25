@@ -173,7 +173,7 @@ public class BST<K extends Comparable<K>, V> {
         if(FileOperation.readFile("pride-and-prejudice.txt", words)) {
             System.out.println("Total words: " + words.size());
 
-            BST<String, Integer> map = new BST<>();
+            com.jd.structures.L14HashTable.L05HashTableImplementation.BST<String, Integer> map = new com.jd.structures.L14HashTable.L05HashTableImplementation.BST<>();
             for (String word : words) {
                 if (map.contains(word))
                     map.set(word, map.get(word) + 1);

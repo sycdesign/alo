@@ -1,5 +1,7 @@
+import com.jd.structures.L14HashTable.L05HashTableImplementation.AVLTree;
+import com.jd.structures.L14HashTable.L05HashTableImplementation.RBTree;
+
 import java.util.ArrayList;
-import java.util.Random;
 
 public class Main3 {
 

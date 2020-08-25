@@ -1,3 +1,5 @@
+import com.jd.structures.L02Arrays.L02CreateOurOwnArray.Array;
+
 public class MaxHeap<E extends Comparable<E>> {
 
     private Array<E> data;

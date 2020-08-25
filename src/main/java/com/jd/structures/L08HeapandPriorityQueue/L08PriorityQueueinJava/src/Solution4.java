@@ -1,6 +1,9 @@
 /// 347. Top K Frequent Elements
 /// https://leetcode.com/problems/top-k-frequent-elements/description/
 
+import com.jd.structures.L04LinkedList.L01LinkedListBasics.LinkedList;
+import com.jd.structures.L14HashTable.L05HashTableImplementation.Solution;
+
 import java.util.*;
 
 public class Solution4 {

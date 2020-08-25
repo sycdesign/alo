@@ -1,0 +1,26 @@
+package com.jd.structures.L06BinarySearchTree.L06PreOrderTraverseinBST;
+
+import com.jd.structures.L14HashTable.L05HashTableImplementation.BST;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        BST<Integer> bst = new BST<>();
+        int[] nums = {5, 3, 6, 8, 4, 2};
+        for(int num: nums)
+            bst.add(num);
+
+        /////////////////
+        //      5      //
+        //    /   \    //
+        //   3    6    //
+        //  / \    \   //
+        // 2  4     8  //
+        /////////////////
+        bst.preOrder();
+        System.out.println();
+
+        System.out.println(bst);
+    }
+}

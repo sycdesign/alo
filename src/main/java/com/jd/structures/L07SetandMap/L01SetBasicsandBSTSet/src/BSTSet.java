@@ -1,3 +1,5 @@
+import com.jd.structures.L14HashTable.L05HashTableImplementation.BST;
+
 public class BSTSet<E extends Comparable<E>> implements Set<E> {
 
     private BST<E> bst;

@@ -1,3 +1,5 @@
+import com.jd.structures.L14HashTable.L05HashTableImplementation.FileOperation;
+
 import java.util.ArrayList;
 
 public class Main {
@@ -65,7 +67,7 @@ public class Main {
 
             // ---
 
-            // Test Array(Map) Trie
+            // Test com.jd.structures.L02Arrays.L02CreateOurOwnArray.com.jd.structures.L02Arrays.L03AddElementinArray.com.jd.structures.L02Arrays.L04QueryandUpdateElement.com.jd.structures.L02Arrays.L05ContainFindandRemove.com.jd.structures.L02Arrays.L06GenericDataStructures.Array(Map) Trie
             startTime = System.nanoTime();
 
             Trie3 trie3 = new Trie3();
@@ -80,7 +82,7 @@ public class Main {
             time = (endTime - startTime) / 1000000000.0;
 
             System.out.println("Total different words: " + trie.getSize());
-            System.out.println("Array(Map) Trie: " + time + " s");
+            System.out.println("com.jd.structures.L02Arrays.L02CreateOurOwnArray.com.jd.structures.L02Arrays.L03AddElementinArray.com.jd.structures.L02Arrays.L04QueryandUpdateElement.com.jd.structures.L02Arrays.L05ContainFindandRemove.com.jd.structures.L02Arrays.L06GenericDataStructures.Array(Map) Trie: " + time + " s");
         }
     }
 }

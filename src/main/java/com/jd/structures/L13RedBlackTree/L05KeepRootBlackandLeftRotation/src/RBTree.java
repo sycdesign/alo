@@ -1,3 +1,5 @@
+import com.jd.structures.L14HashTable.L05HashTableImplementation.FileOperation;
+
 import java.util.ArrayList;
 
 public class RBTree<K extends Comparable<K>, V> {
@@ -205,7 +207,7 @@ public class RBTree<K extends Comparable<K>, V> {
         if(FileOperation.readFile("pride-and-prejudice.txt", words)) {
             System.out.println("Total words: " + words.size());
 
-            RBTree<String, Integer> map = new RBTree<>();
+            com.jd.structures.L14HashTable.L05HashTableImplementation.RBTree<String, Integer> map = new com.jd.structures.L14HashTable.L05HashTableImplementation.RBTree<>();
             for (String word : words) {
                 if (map.contains(word))
                     map.set(word, map.get(word) + 1);
