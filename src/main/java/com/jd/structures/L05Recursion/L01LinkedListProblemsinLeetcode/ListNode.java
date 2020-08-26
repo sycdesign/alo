@@ -1,5 +1,4 @@
 package com.jd.structures.L05Recursion.L01LinkedListProblemsinLeetcode;
-
 //Definition for singly-linked list.
 public class ListNode {
 

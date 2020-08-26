@@ -261,7 +261,7 @@ class Solution {
 
     public static void main(String[] args) {
 
-        System.out.println((new com.jd.structures.L14HashTable.L05HashTableImplementation.Solution()).isValid("()[]{}"));
-        System.out.println((new com.jd.structures.L14HashTable.L05HashTableImplementation.Solution()).isValid("([)]"));
+        System.out.println((new Solution()).isValid("()[]{}"));
+        System.out.println((new Solution()).isValid("([)]"));
     }
 }

@@ -1,6 +1,6 @@
 package com.jd.structures.L03StacksandQueues.L04MoreaboutLeetcode;
 
-import com.jd.structures.L03StacksandQueues.L02ArrayStack.ArrayStack;
+//03StacksandQueues.L02ArrayStack.ArrayStack;
 
 class Solution {
 
@@ -29,7 +29,7 @@ class Solution {
 
     public static void main(String[] args) {
 
-        System.out.println((new com.jd.structures.L14HashTable.L05HashTableImplementation.Solution()).isValid("()[]{}"));
-        System.out.println((new com.jd.structures.L14HashTable.L05HashTableImplementation.Solution()).isValid("([)]"));
+        System.out.println((new Solution()).isValid("()[]{}"));
+        System.out.println((new Solution()).isValid("([)]"));
     }
 }

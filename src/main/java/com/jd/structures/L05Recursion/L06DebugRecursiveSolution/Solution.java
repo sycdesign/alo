@@ -1,6 +1,6 @@
 package com.jd.structures.L05Recursion.L06DebugRecursiveSolution;
 
-import com.jd.structures.L05Recursion.L01LinkedListProblemsinLeetcode.ListNode;
+
 
 public class Solution {
 
@@ -47,7 +47,7 @@ public class Solution {
         ListNode head = new ListNode(nums);
         System.out.println(head);
 
-        ListNode res = (new com.jd.structures.L14HashTable.L05HashTableImplementation.Solution()).removeElements(head, 6, 0);
+        ListNode res = (new Solution()).removeElements(head, 6, 0);
         System.out.println(res);
     }
 

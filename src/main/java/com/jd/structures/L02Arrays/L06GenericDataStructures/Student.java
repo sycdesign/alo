@@ -13,7 +13,7 @@ public class Student {
 
     @Override
     public String toString(){
-        return String.format("com.jd.structures.L02Arrays.L06GenericDataStructures.Student(name: %s, score: %d)", name, score);
+        return String.format("Student(name: %s, score: %d)", name, score);
     }
 
     public static void main(String[] args) {

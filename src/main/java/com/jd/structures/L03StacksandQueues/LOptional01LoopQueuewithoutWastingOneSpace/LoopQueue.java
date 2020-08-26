@@ -1,6 +1,6 @@
 package com.jd.structures.L03StacksandQueues.LOptional01LoopQueuewithoutWastingOneSpace;
 
-import com.jd.structures.L03StacksandQueues.L05ArrayQueue.Queue;
+//03StacksandQueues.L05ArrayQueue.Queue;
 
 // 在这一版LoopQueue的实现中，我们将不浪费那1个空间：）
 public class LoopQueue<E> implements Queue<E> {

@@ -1,6 +1,6 @@
 package com.jd.structures.L04LinkedList.L05RemoveElementinLinkedList;
 
-import com.jd.structures.L04LinkedList.L01LinkedListBasics.LinkedList;
+//04LinkedList.L01LinkedListBasics.LinkedList;
 
 public class Main {
 

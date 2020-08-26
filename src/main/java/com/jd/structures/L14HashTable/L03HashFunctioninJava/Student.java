@@ -38,7 +38,7 @@ public class Student {
         if(getClass() != o.getClass())
             return false;
 
-        com.jd.structures.L02Arrays.L06GenericDataStructures.Student another = (com.jd.structures.L02Arrays.L06GenericDataStructures.Student)o;
+        Student another = (Student)o;
         return this.grade == another.grade &&
                 this.cls == another.cls &&
                 this.firstName.toLowerCase().equals(another.firstName.toLowerCase()) &&

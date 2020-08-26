@@ -1,7 +1,5 @@
 package com.jd.structures.L04LinkedList.L07ImplementQueueinLinkedList;
 
-import com.jd.structures.L02Arrays.L02CreateOurOwnArray.Array;
-import com.jd.structures.L03StacksandQueues.L05ArrayQueue.Queue;
 
 public class ArrayQueue<E> implements Queue<E> {
 

@@ -1,6 +1,6 @@
 package com.jd.structures.L03StacksandQueues.LOptional02LoopQueuewithoutSizeMember;
 
-import com.jd.structures.L03StacksandQueues.L05ArrayQueue.Queue;
+//03StacksandQueues.L05ArrayQueue.Queue;
 
 // 在这一版本的实现中，我们完全不使用size，只使用front和tail来完成LoopQueue的所有逻辑：）
 public class LoopQueue<E> implements Queue<E> {

@@ -1,7 +1,7 @@
 package com.jd.structures.L04LinkedList.L06ImplementStackinLinkedList;
 
-import com.jd.structures.L03StacksandQueues.L02ArrayStack.Stack;
-import com.jd.structures.L04LinkedList.L01LinkedListBasics.LinkedList;
+//03StacksandQueues.L02ArrayStack.Stack;
+//04LinkedList.L01LinkedListBasics.LinkedList;
 
 public class LinkedListStack<E> implements Stack<E> {
 

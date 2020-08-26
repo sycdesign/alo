@@ -1,6 +1,5 @@
 package com.jd.structures.L03StacksandQueues.L02ArrayStack;
 
-import com.jd.structures.L02Arrays.L02CreateOurOwnArray.Array;
 
 public class ArrayStack<E> implements Stack<E> {
 

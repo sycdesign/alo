@@ -1,6 +1,6 @@
 package com.jd.structures.L06BinarySearchTree.L11RemoveMinandMaxinBST;
 
-import com.jd.structures.L14HashTable.L05HashTableImplementation.BST;
+//14HashTable.L05HashTableImplementation.BST;
 
 import java.util.ArrayList;
 import java.util.Random;

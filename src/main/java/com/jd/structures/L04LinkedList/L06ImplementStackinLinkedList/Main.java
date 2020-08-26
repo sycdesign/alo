@@ -1,7 +1,7 @@
 package com.jd.structures.L04LinkedList.L06ImplementStackinLinkedList;
 
-import com.jd.structures.L03StacksandQueues.L02ArrayStack.ArrayStack;
-import com.jd.structures.L03StacksandQueues.L02ArrayStack.Stack;
+//03StacksandQueues.L02ArrayStack.ArrayStack;
+//03StacksandQueues.L02ArrayStack.Stack;
 
 import java.util.Random;
 

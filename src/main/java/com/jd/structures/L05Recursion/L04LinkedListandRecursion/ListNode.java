@@ -4,7 +4,7 @@ package com.jd.structures.L05Recursion.L04LinkedListandRecursion;
 public class ListNode {
 
     public int val;
-    public com.jd.structures.L05Recursion.L01LinkedListProblemsinLeetcode.ListNode next;
+    public ListNode next;
 
     public ListNode(int x) {
         val = x;
@@ -18,9 +18,9 @@ public class ListNode {
             throw new IllegalArgumentException("arr can not be empty");
 
         this.val = arr[0];
-        com.jd.structures.L05Recursion.L01LinkedListProblemsinLeetcode.ListNode cur = this;
+        ListNode cur = this;
         for(int i = 1 ; i < arr.length ; i ++){
-            cur.next = new com.jd.structures.L05Recursion.L01LinkedListProblemsinLeetcode.ListNode(arr[i]);
+            cur.next = new ListNode(arr[i]);
             cur = cur.next;
         }
     }
@@ -30,7 +30,7 @@ public class ListNode {
     public String toString(){
 
         StringBuilder s = new StringBuilder();
-        com.jd.structures.L05Recursion.L01LinkedListProblemsinLeetcode.ListNode cur = this;
+        ListNode cur = this;
         while(cur != null){
             s.append(cur.val + "->");
             cur = cur.next;

@@ -1,6 +1,6 @@
 package com.jd.structures.L02Arrays.L09AmortizedTimeComplexity;
 
-import com.jd.structures.L02Arrays.L02CreateOurOwnArray.Array;
+//02Arrays.L02CreateOurOwnArray.Array;
 
 public class Main {
 

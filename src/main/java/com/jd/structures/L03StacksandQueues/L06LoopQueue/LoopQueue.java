@@ -1,6 +1,6 @@
 package com.jd.structures.L03StacksandQueues.L06LoopQueue;
 
-import com.jd.structures.L03StacksandQueues.L05ArrayQueue.Queue;
+//03StacksandQueues.L05ArrayQueue.Queue;
 
 public class LoopQueue<E> implements Queue<E> {
 

@@ -1,8 +1,8 @@
 package com.jd.structures.L04LinkedList.L07ImplementQueueinLinkedList;
 
-import com.jd.structures.L03StacksandQueues.L05ArrayQueue.ArrayQueue;
-import com.jd.structures.L03StacksandQueues.L05ArrayQueue.Queue;
-import com.jd.structures.L03StacksandQueues.L06LoopQueue.LoopQueue;
+//03StacksandQueues.L05ArrayQueue.ArrayQueue;
+//03StacksandQueues.L05ArrayQueue.Queue;
+//03StacksandQueues.L06LoopQueue.LoopQueue;
 
 import java.util.Random;
 

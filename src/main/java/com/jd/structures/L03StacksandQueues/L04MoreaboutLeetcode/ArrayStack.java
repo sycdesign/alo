@@ -1,7 +1,5 @@
 package com.jd.structures.L03StacksandQueues.L04MoreaboutLeetcode;
 
-import com.jd.structures.L02Arrays.L02CreateOurOwnArray.Array;
-import com.jd.structures.L03StacksandQueues.L02ArrayStack.Stack;
 
 public class ArrayStack<E> implements Stack<E> {
 
