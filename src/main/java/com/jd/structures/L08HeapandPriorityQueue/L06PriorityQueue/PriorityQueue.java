@@ -1,8 +1,5 @@
 package com.jd.structures.L08HeapandPriorityQueue.L06PriorityQueue;
 
-//03StacksandQueues.L05ArrayQueue.Queue;
-//08HeapandPriorityQueue.L04ExtractandSiftDowninHeap.MaxHeap;
-
 public class PriorityQueue<E extends Comparable<E>> implements Queue<E> {
 
     private MaxHeap<E> maxHeap;

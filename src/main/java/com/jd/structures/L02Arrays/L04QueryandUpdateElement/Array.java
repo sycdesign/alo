@@ -45,7 +45,7 @@ public class Array {
     public void add(int index, int e){
 
         if(size == data.length)
-            throw new IllegalArgumentException("Add failed. com.jd.structures.L02Arrays.L02CreateOurOwnArray.com.jd.structures.L02Arrays.L03AddElementinArray.com.jd.structures.L02Arrays.L04QueryandUpdateElement.com.jd.structures.L02Arrays.L05ContainFindandRemove.com.jd.structures.L02Arrays.L06GenericDataStructures.Array is full.");
+            throw new IllegalArgumentException("Add failed. Array is full.");
 
         if(index < 0 || index > size)
             throw new IllegalArgumentException("Add failed. Require index >= 0 and index <= size.");
@@ -76,7 +76,7 @@ public class Array {
     public String toString(){
 
         StringBuilder res = new StringBuilder();
-        res.append(String.format("com.jd.structures.L02Arrays.L02CreateOurOwnArray.com.jd.structures.L02Arrays.L03AddElementinArray.com.jd.structures.L02Arrays.L04QueryandUpdateElement.com.jd.structures.L02Arrays.L05ContainFindandRemove.com.jd.structures.L02Arrays.L06GenericDataStructures.Array: size = %d , capacity = %d\n", size, data.length));
+        res.append(String.format("Array: size = %d , capacity = %d\n", size, data.length));
         res.append('[');
         for(int i = 0 ; i < size ; i ++){
             res.append(data[i]);

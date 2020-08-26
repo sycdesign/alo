@@ -35,7 +35,7 @@ public class Array {
     public void addLast(int e){
 
 //        if(size == data.length)
-//            throw new IllegalArgumentException("AddLast failed. com.jd.structures.L02Arrays.L02CreateOurOwnArray.com.jd.structures.L02Arrays.L03AddElementinArray.com.jd.structures.L02Arrays.L04QueryandUpdateElement.com.jd.structures.L02Arrays.L05ContainFindandRemove.com.jd.structures.L02Arrays.L06GenericDataStructures.Array is full.");
+//            throw new IllegalArgumentException("AddLast failed. Array is full.");
 //
 //        data[size] = e;
 //        size ++;
@@ -51,7 +51,7 @@ public class Array {
     public void add(int index, int e){
 
         if(size == data.length)
-            throw new IllegalArgumentException("Add failed. com.jd.structures.L02Arrays.L02CreateOurOwnArray.com.jd.structures.L02Arrays.L03AddElementinArray.com.jd.structures.L02Arrays.L04QueryandUpdateElement.com.jd.structures.L02Arrays.L05ContainFindandRemove.com.jd.structures.L02Arrays.L06GenericDataStructures.Array is full.");
+            throw new IllegalArgumentException("Add failed. Array is full.");
 
         if(index < 0 || index > size)
             throw new IllegalArgumentException("Add failed. Require index >= 0 and index <= size.");

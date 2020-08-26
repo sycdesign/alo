@@ -1,4 +1,5 @@
-package com.jd.structures.L08HeapandPriorityQueue.L05HeapifyandReplaceinHeap;/// 347. Top K Frequent Elements
+package com.jd.structures.L08HeapandPriorityQueue.L05HeapifyandReplaceinHeap;
+/// 347. Top K Frequent Elements
 /// https://leetcode.com/problems/top-k-frequent-elements/description/
 ///
 /// 课程中在这里暂时没有介绍这个问题
@@ -154,7 +155,7 @@ class Solution {
         public String toString(){
 
             StringBuilder res = new StringBuilder();
-            res.append(String.format("com.jd.structures.L02Arrays.L02CreateOurOwnArray.com.jd.structures.L02Arrays.L03AddElementinArray.com.jd.structures.L02Arrays.L04QueryandUpdateElement.com.jd.structures.L02Arrays.L05ContainFindandRemove.com.jd.structures.L02Arrays.L06GenericDataStructures.Array: size = %d , capacity = %d\n", size, data.length));
+            res.append(String.format("Array: size = %d , capacity = %d\n", size, data.length));
             res.append('[');
             for(int i = 0 ; i < size ; i ++){
                 res.append(data[i]);

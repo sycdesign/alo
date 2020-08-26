@@ -1,6 +1,5 @@
 package com.jd.structures.L08HeapandPriorityQueue.L06PriorityQueue;
 
-//08HeapandPriorityQueue.L04ExtractandSiftDowninHeap.MaxHeap;
 
 import java.util.Random;
 
