@@ -17,6 +17,9 @@
 // 👍 366 👎 0
 
 package leetcode.editor.cn;
+
+import java.util.Arrays;
+
 //Java：整数拆分
 public class P343IntegerBreak{
     public static void main(String[] args) {
@@ -25,15 +28,36 @@ public class P343IntegerBreak{
     }
     //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
-    public int integerBreak(int n) {
-        if (n==2) return 1;
-        if (n==3) return 2;
-        for (int i = 4; i < n; i++) {
 
+    private int[] memo;
+
+    public int integerBreak(int n) {
+
+        if(n < 1)
+            throw new IllegalArgumentException("n should be greater than zero");
+        memo = new int[n+1];
+        Arrays.fill(memo, -1);
+        return breakInteger(n);
+    }
+    private int breakInteger(int n) {
+        if (n == 1) return 1;
+
+        if (memo[n] != -1){
+            return  memo[n];
         }
-        return 0;
+
+        int res = -1;
+
+        for(int i = 1 ; i <= n-1 ; i ++){
+            res = Math.max(Math.max(res , i * (n-i)), i * breakInteger(n-i));
+        }
+
+        memo[n] = res;
+
+        return res;
     }
 }
+
 //leetcode submit region end(Prohibit modification and deletion)
 
 }
