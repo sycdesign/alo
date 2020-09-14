@@ -6,11 +6,11 @@ package com.jd.lee.L02TimeComplexity.L05RecursionTimeComplexity.src;
 public class Main2 {
 
     // f
-    private static int f(int n){
+    private static int f(int n) {
 
-        assert( n >= 0 );
+        assert (n >= 0);
 
-        if(n == 0)
+        if (n == 0)
             return 1;
 
         return f(n - 1) + f(n - 1);

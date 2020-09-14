@@ -19,19 +19,19 @@ public class Solution5 {
     }
 
     // 考虑抢劫nums[index...nums.size())这个范围的所有房子
-    private int tryRob(int[] nums, int index){
+    private int tryRob(int[] nums, int index) {
 
-        if(index >= nums.length)
+        if (index >= nums.length)
             return 0;
 
-        if(memo[index] != -1)
+        if (memo[index] != -1)
             return memo[index];
 
         // 或者当前房子放弃, 从下一个房子开始考虑
         // 或者抢劫当前的房子, 从i+2以后的房子开始考虑
         return memo[index] =
                 Math.max(tryRob(nums, index + 1),
-                         nums[index] + tryRob(nums, index + 2));
+                        nums[index] + tryRob(nums, index + 2));
     }
 
     public static void main(String[] args) {

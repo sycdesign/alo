@@ -11,37 +11,37 @@ public class MyVector<Item> {
     private int size;       // 存储数组中的元素个数
     private int capacity;   // 存储数组中可以容纳的最大的元素个数
 
-    public MyVector(){
-        data = (Item[])new Object[100];
+    public MyVector() {
+        data = (Item[]) new Object[100];
         size = 0;
         capacity = 100;
     }
 
     // 平均复杂度为 O(1)
-    public void push_back(Item e){
+    public void push_back(Item e) {
 
-        if(size == capacity)
+        if (size == capacity)
             resize(2 * capacity);
 
         data[size++] = e;
     }
 
     // 平均复杂度为 O(1)
-    public Item pop_back(){
+    public Item pop_back() {
 
-        if(size <= 0)
+        if (size <= 0)
             throw new IllegalArgumentException("can not pop back for empty vector.");
 
-        size --;
+        size--;
         return data[size];
     }
 
     // 复杂度为 O(n)
-    private void resize(int newCapacity){
+    private void resize(int newCapacity) {
 
         assert newCapacity >= size;
-        Item[] newData = (Item[])new Object[newCapacity];
-        for(int i = 0 ; i < size ; i ++)
+        Item[] newData = (Item[]) new Object[newCapacity];
+        for (int i = 0; i < size; i++)
             newData[i] = data[i];
 
         data = newData;
@@ -51,13 +51,13 @@ public class MyVector<Item> {
     // 注意：Java语言由于JVM内部机制的因素，测量的性能时间有可能是跳跃不稳定的。
     public static void main(String[] args) {
 
-        for( int i = 10 ; i <= 26 ; i ++ ){
+        for (int i = 10; i <= 26; i++) {
 
-            int n = (int)Math.pow(2,i);
+            int n = (int) Math.pow(2, i);
 
             long startTime = System.currentTimeMillis();
             MyVector<Integer> vec = new MyVector<Integer>();
-            for(int num = 0 ; num < n ; num ++){
+            for (int num = 0; num < n; num++) {
                 vec.push_back(num);
             }
             long endTime = System.currentTimeMillis();

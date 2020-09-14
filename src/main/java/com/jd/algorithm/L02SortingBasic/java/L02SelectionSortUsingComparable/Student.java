@@ -5,7 +5,7 @@ public class Student implements Comparable<Student> {
     private String name;
     private int score;
 
-    public Student(String name, int score){
+    public Student(String name, int score) {
         this.name = name;
         this.score = score;
     }
@@ -16,9 +16,9 @@ public class Student implements Comparable<Student> {
     @Override
     public int compareTo(Student that) {
 
-        if( this.score < that.score )
+        if (this.score < that.score)
             return -1;
-        else if( this.score > that.score )
+        else if (this.score > that.score)
             return 1;
         else // this.score == that.score
             return this.name.compareTo(that.name);
@@ -27,6 +27,6 @@ public class Student implements Comparable<Student> {
     // 定义Student实例的打印输出方式
     @Override
     public String toString() {
-        return "Student: " + this.name + " " + Integer.toString( this.score );
+        return "Student: " + this.name + " " + Integer.toString(this.score);
     }
 }

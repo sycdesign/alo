@@ -14,26 +14,25 @@ import java.util.Stack;
 // Space Complexity: O(n)
 public class Solution3 {
 
-    public List<Integer> postorderTraversal(TreeNode root){
+    public List<Integer> postorderTraversal(TreeNode root) {
 
         Stack<TreeNode> stack = new Stack<>();
         LinkedList<TreeNode> output = new LinkedList<>();
 
         TreeNode p = root;
-        while(p != null || !stack.isEmpty()){
-            if(p != null){
+        while (p != null || !stack.isEmpty()) {
+            if (p != null) {
                 stack.push(p);
                 output.push(p);
                 p = p.right;
-            }
-            else{
+            } else {
                 p = stack.pop();
                 p = p.left;
             }
         }
 
         ArrayList<Integer> res = new ArrayList<>();
-        while(!output.isEmpty())
+        while (!output.isEmpty())
             res.add(output.pop().val);
         return res;
     }

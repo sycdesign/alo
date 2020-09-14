@@ -18,7 +18,7 @@ public class Main {
 
         // 比较 Shell Sort 和 Merge Sort 和 三种 Quick Sort 的性能效率
         long time1 = 0, time2 = 0, time3 = 0, time4 = 0, time5 = 0;
-        for( int i = 0 ; i < T ; i ++ ) {
+        for (int i = 0; i < T; i++) {
             Integer[] arr1 = SortTestHelper.generateRandomArray(N, 0, N);
             Integer[] arr2 = Arrays.copyOf(arr1, arr1.length);
             Integer[] arr3 = Arrays.copyOf(arr1, arr1.length);
@@ -32,11 +32,11 @@ public class Main {
             time5 += SortTestHelper.testSort2("bobo.algo.QuickSort3Ways", arr5);
         }
         System.out.println("Sorting " + N + " elements " + T + " times. Calculate the average run time.");
-        System.out.println("Shell Sort        Average Run Time: " + time1/T + " ms");
-        System.out.println("Merge Sort        Average Run Time: " + time2/T + " ms");
-        System.out.println("Quick Sort        Average Run Time: " + time3/T + " ms");
-        System.out.println("Quick Sort 2 Ways Average Run Time: " + time4/T + " ms");
-        System.out.println("Quick Sort 3 Ways Average Run Time: " + time5/T + " ms");
+        System.out.println("Shell Sort        Average Run Time: " + time1 / T + " ms");
+        System.out.println("Merge Sort        Average Run Time: " + time2 / T + " ms");
+        System.out.println("Quick Sort        Average Run Time: " + time3 / T + " ms");
+        System.out.println("Quick Sort 2 Ways Average Run Time: " + time4 / T + " ms");
+        System.out.println("Quick Sort 3 Ways Average Run Time: " + time5 / T + " ms");
 
 
         return;

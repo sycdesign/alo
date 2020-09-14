@@ -40,31 +40,32 @@ package leetcode.editor.cn;
 import java.util.Arrays;
 
 //Java：分发饼干
-public class P455AssignCookies{
+public class P455AssignCookies {
     public static void main(String[] args) {
         Solution solution = new P455AssignCookies().new Solution();
         // TO TEST
     }
+
     //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public int findContentChildren(int[] g, int[] s) {
-        Arrays.sort(g);
-        Arrays.sort(s);
-        int gi = g.length - 1;
-        int si = s.length - 1;
-        int res = 0;
-        while (gi >= 0 && si >= 0){
-            if (g[gi]<=s[si]){
-                gi--;
-                si--;
-                res++;
-            }else{
-                gi--;
+    class Solution {
+        public int findContentChildren(int[] g, int[] s) {
+            Arrays.sort(g);
+            Arrays.sort(s);
+            int gi = g.length - 1;
+            int si = s.length - 1;
+            int res = 0;
+            while (gi >= 0 && si >= 0) {
+                if (g[gi] <= s[si]) {
+                    gi--;
+                    si--;
+                    res++;
+                } else {
+                    gi--;
+                }
             }
+            return res;
         }
-        return res;
     }
-}
 //leetcode submit region end(Prohibit modification and deletion)
 
 }

@@ -13,16 +13,16 @@ public class PrimMST<Weight extends Number & Comparable> {
     private Number mstWeight;             // 最小生成树的权值
 
     // 构造函数, 使用Prim算法求图的最小生成树
-    public PrimMST(WeightedGraph graph){
+    public PrimMST(WeightedGraph graph) {
 
         G = graph;
-        assert( graph.E() >= 1 );
+        assert (graph.E() >= 1);
         ipq = new IndexMinHeap<Weight>(graph.V());
 
         // 算法初始化
         marked = new boolean[G.V()];
         edgeTo = new Edge[G.V()];
-        for( int i = 0 ; i < G.V() ; i ++ ){
+        for (int i = 0; i < G.V(); i++) {
             marked[i] = false;
             edgeTo[i] = null;
         }
@@ -30,40 +30,40 @@ public class PrimMST<Weight extends Number & Comparable> {
 
         // Prim
         visit(0);
-        while( !ipq.isEmpty() ){
+        while (!ipq.isEmpty()) {
             // 使用最小索引堆找出已经访问的边中权值最小的边
             // 最小索引堆中存储的是点的索引, 通过点的索引找到相对应的边
             int v = ipq.extractMinIndex();
-            assert( edgeTo[v] != null );
-            mst.add( edgeTo[v] );
-            visit( v );
+            assert (edgeTo[v] != null);
+            mst.add(edgeTo[v]);
+            visit(v);
         }
 
         // 计算最小生成树的权值
         mstWeight = mst.elementAt(0).wt();
-        for( int i = 1 ; i < mst.size() ; i ++ )
+        for (int i = 1; i < mst.size(); i++)
             mstWeight = mstWeight.doubleValue() + mst.elementAt(i).wt().doubleValue();
     }
 
     // 访问节点v
-    void visit(int v){
+    void visit(int v) {
 
         assert !marked[v];
         marked[v] = true;
 
         // 将和节点v相连接的未访问的另一端点, 和与之相连接的边, 放入最小堆中
-        for( Object item : G.adj(v) ){
-            Edge<Weight> e = (Edge<Weight>)item;
+        for (Object item : G.adj(v)) {
+            Edge<Weight> e = (Edge<Weight>) item;
             int w = e.other(v);
             // 如果边的另一端点未被访问
-            if( !marked[w] ){
+            if (!marked[w]) {
                 // 如果从没有考虑过这个端点, 直接将这个端点和与之相连接的边加入索引堆
-                if( edgeTo[w] == null ){
+                if (edgeTo[w] == null) {
                     edgeTo[w] = e;
                     ipq.insert(w, e.wt());
                 }
                 // 如果曾经考虑这个端点, 但现在的边比之前考虑的边更短, 则进行替换
-                else if( e.wt().compareTo(edgeTo[w].wt()) < 0 ){
+                else if (e.wt().compareTo(edgeTo[w].wt()) < 0) {
                     edgeTo[w] = e;
                     ipq.change(w, e.wt());
                 }
@@ -73,12 +73,12 @@ public class PrimMST<Weight extends Number & Comparable> {
     }
 
     // 返回最小生成树的所有边
-    Vector<Edge<Weight>> mstEdges(){
+    Vector<Edge<Weight>> mstEdges() {
         return mst;
     }
 
     // 返回最小生成树的权值
-    Number result(){
+    Number result() {
         return mstWeight;
     }
 
@@ -96,7 +96,7 @@ public class PrimMST<Weight extends Number & Comparable> {
         System.out.println("Test Prim MST:");
         PrimMST<Double> primMST = new PrimMST<Double>(g);
         Vector<Edge<Double>> mst = primMST.mstEdges();
-        for( int i = 0 ; i < mst.size() ; i ++ )
+        for (int i = 0; i < mst.size(); i++)
             System.out.println(mst.elementAt(i));
         System.out.println("The MST weight is: " + primMST.result());
 

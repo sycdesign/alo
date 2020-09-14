@@ -16,12 +16,12 @@ public class Solution {
 
         int gi = g.length - 1, si = s.length - 1;
         int res = 0;
-        while(gi >= 0 && si >= 0){
-            if(s[si] >= g[gi]){
-                res ++;
-                si --;
+        while (gi >= 0 && si >= 0) {
+            if (s[si] >= g[gi]) {
+                res++;
+                si--;
             }
-            gi --;
+            gi--;
         }
 
         return res;

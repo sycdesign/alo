@@ -5,30 +5,31 @@ package com.jd.algorithm.L02SortingBasic.java.LOptional01OptimizedSelectionSort;
 public class SelectionSort2 {
 
     // 我们的算法类不允许产生任何实例
-    private SelectionSort2(){}
+    private SelectionSort2() {
+    }
 
-    public static void sort(Comparable[] arr){
+    public static void sort(Comparable[] arr) {
 
         int left = 0, right = arr.length - 1;
-        while(left < right){
+        while (left < right) {
             int minIndex = left;
             int maxIndex = right;
 
             // 在每一轮查找时, 要保证arr[minIndex] <= arr[maxIndex]
-            if(arr[minIndex].compareTo(arr[maxIndex]) > 0)
+            if (arr[minIndex].compareTo(arr[maxIndex]) > 0)
                 swap(arr, minIndex, maxIndex);
 
-            for(int i = left + 1 ; i < right; i ++)
-                if(arr[i].compareTo(arr[minIndex]) < 0)
+            for (int i = left + 1; i < right; i++)
+                if (arr[i].compareTo(arr[minIndex]) < 0)
                     minIndex = i;
-                else if(arr[i].compareTo(arr[maxIndex]) > 0)
+                else if (arr[i].compareTo(arr[maxIndex]) > 0)
                     maxIndex = i;
 
             swap(arr, left, minIndex);
             swap(arr, right, maxIndex);
 
-            left ++;
-            right --;
+            left++;
+            right--;
         }
     }
 

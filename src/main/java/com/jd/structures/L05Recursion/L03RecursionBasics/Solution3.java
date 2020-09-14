@@ -2,7 +2,6 @@ package com.jd.structures.L05Recursion.L03RecursionBasics;/// Leetcode 203. Remo
 /// https://leetcode.com/problems/remove-linked-list-elements/description/
 
 
-
 class Solution3 {
 
     public ListNode removeElements(ListNode head, int val) {
@@ -11,8 +10,8 @@ class Solution3 {
         dummyHead.next = head;
 
         ListNode prev = dummyHead;
-        while(prev.next != null){
-            if(prev.next.val == val)
+        while (prev.next != null) {
+            if (prev.next.val == val)
                 prev.next = prev.next.next;
             else
                 prev = prev.next;

@@ -19,19 +19,19 @@ public class Solution7 {
     }
 
     // 考虑抢劫nums[0...index]这个范围的所有房子
-    private int tryRob(int[] nums, int index){
+    private int tryRob(int[] nums, int index) {
 
-        if(index < 0)
+        if (index < 0)
             return 0;
 
-        if(memo[index] != -1)
+        if (memo[index] != -1)
             return memo[index];
 
         // 或者当前房子放弃, 考虑[0...index-1]的所有房子
         // 或者抢劫当前的房子, 考虑[0...index-2]的所有房子
         return memo[index] =
                 Math.max(tryRob(nums, index - 1),
-                         nums[index] + tryRob(nums, index - 2));
+                        nums[index] + tryRob(nums, index - 2));
     }
 
     public static void main(String[] args) {

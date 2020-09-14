@@ -6,9 +6,9 @@ import java.lang.Class;
 // 比较这个工程中 Solution1, Solution2, Solution3, Solution4 和 Solution5 的算法运行效率
 public class Main {
 
-    public static void testPerformace(String algoClassName, String algoName, String s){
+    public static void testPerformace(String algoClassName, String algoName, String s) {
 
-        try{
+        try {
             Class algoClass = Class.forName(algoClassName);
             Object solution = algoClass.newInstance();
 
@@ -20,11 +20,10 @@ public class Main {
             Object resObj = algoMethod.invoke(solution, s);
             long endTime = System.currentTimeMillis();
 
-            int res = (Integer)resObj;
+            int res = (Integer) resObj;
             System.out.print(algoClassName + " : res = " + res + " ");
-            System.out.println("Time = " + (endTime-startTime) + " ms" );
-        }
-        catch(Exception e){
+            System.out.println("Time = " + (endTime - startTime) + " ms");
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -34,8 +33,8 @@ public class Main {
         int n = 10000000;
 
         StringBuilder s = new StringBuilder(n);
-        for(int i = 0 ; i < n ; i ++)
-            s.append((char)(Math.random()*95 + 32));
+        for (int i = 0; i < n; i++)
+            s.append((char) (Math.random() * 95 + 32));
 
         System.out.println("Test: 10,000,000 length of completely random string:");
         testPerformace("Solution1", "lengthOfLongestSubstring", s.toString());

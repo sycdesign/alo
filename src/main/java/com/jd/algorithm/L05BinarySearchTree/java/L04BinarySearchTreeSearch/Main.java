@@ -11,8 +11,8 @@ public class Main {
         // 使用圣经作为我们的测试用例
         String filename = "bible.txt";
         Vector<String> words = new Vector<String>();
-        if(FileOperations.readFile(filename, words)){
-            System.out.println( "There are totally " + words.size() + " words in " + filename );
+        if (FileOperations.readFile(filename, words)) {
+            System.out.println("There are totally " + words.size() + " words in " + filename);
             System.out.println();
 
             // 测试 BST
@@ -22,7 +22,7 @@ public class Main {
             // 注: 这个词频统计法相对简陋, 没有考虑很多文本处理中的特殊问题
             // 在这里只做性能测试用
             BST<String, Integer> bst = new BST<String, Integer>();
-            for (String word: words) {
+            for (String word : words) {
                 Integer res = bst.search(word);
                 if (res == null)
                     bst.insert(word, new Integer(1));
@@ -31,8 +31,8 @@ public class Main {
             }
 
             // 输出圣经中god一词出现的频率
-            if( bst.contain("god") )
-                System.out.println("'god' : " + bst.search("god") );
+            if (bst.contain("god"))
+                System.out.println("'god' : " + bst.search("god"));
             else
                 System.out.println("No word 'god' in " + filename);
 
@@ -49,7 +49,7 @@ public class Main {
             // 注: 这个词频统计法相对简陋, 没有考虑很多文本处理中的特殊问题
             // 在这里只做性能测试用
             SST<String, Integer> sst = new SST<String, Integer>();
-            for (String word: words) {
+            for (String word : words) {
                 Integer res = sst.search(word);
                 if (res == null)
                     sst.insert(word, new Integer(1));
@@ -58,8 +58,8 @@ public class Main {
             }
 
             // 输出圣经中god一词出现的频率
-            if( sst.contain("god") )
-                System.out.println("'god' : " + sst.search("god") );
+            if (sst.contain("god"))
+                System.out.println("'god' : " + sst.search("god"));
             else
                 System.out.println("No word 'god' in " + filename);
 

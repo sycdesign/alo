@@ -15,33 +15,35 @@
 // 👍 8954 👎 0
 
 package leetcode.editor.cn;
+
 //Java：两数之和
-public class P1TwoSum{
+public class P1TwoSum {
     public static void main(String[] args) {
         Solution solution = new P1TwoSum().new Solution();
         // TO TEST
         int[] nums = new int[]{2, 7, 11, 15};
         int target = 9;
-        int[] result = solution.twoSum(nums,target);
+        int[] result = solution.twoSum(nums, target);
 
         for (int r : result) {
             System.out.println(r);
         }
     }
+
     //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public int[] twoSum(int[] nums, int target) {
-        for (int i = 0; i < nums.length; i++) {
-            for (int j = i+1; j < nums.length; j++) {
-                if ((nums[i] + nums[j])==target){
-                    return new int[]{i,j};
+    class Solution {
+        public int[] twoSum(int[] nums, int target) {
+            for (int i = 0; i < nums.length; i++) {
+                for (int j = i + 1; j < nums.length; j++) {
+                    if ((nums[i] + nums[j]) == target) {
+                        return new int[]{i, j};
+                    }
                 }
             }
-        }
 
-        throw  new IllegalArgumentException("no two sum solution");
+            throw new IllegalArgumentException("no two sum solution");
+        }
     }
-}
 //leetcode submit region end(Prohibit modification and deletion)
 
 }

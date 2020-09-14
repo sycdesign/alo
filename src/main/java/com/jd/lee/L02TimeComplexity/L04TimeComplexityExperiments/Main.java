@@ -10,9 +10,9 @@ public class Main {
         // 数据规模倍乘测试findMax
         // O(n)
         System.out.println("Test for findMax:");
-        for( int i = 10 ; i <= 28 ; i ++ ){
+        for (int i = 10; i <= 28; i++) {
 
-            int n = (int)Math.pow(2, i);
+            int n = (int) Math.pow(2, i);
             Integer[] arr = MyUtil.generateRandomArray(n, 0, 100000000);
 
             long startTime = System.currentTimeMillis();

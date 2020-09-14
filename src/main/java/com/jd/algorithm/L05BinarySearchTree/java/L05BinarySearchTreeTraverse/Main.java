@@ -10,8 +10,8 @@ public class Main {
         // 取n个取值范围在[0...m)的随机整数放进二分搜索树中
         int N = 10;
         int M = 100;
-        for(int i = 0 ; i < N ; i ++){
-            Integer key = new Integer((int)(Math.random()*M));
+        for (int i = 0; i < N; i++) {
+            Integer key = new Integer((int) (Math.random() * M));
             // 为了后续测试方便,这里value值取和key值一样
             bst.insert(key, key);
             System.out.print(key + " ");

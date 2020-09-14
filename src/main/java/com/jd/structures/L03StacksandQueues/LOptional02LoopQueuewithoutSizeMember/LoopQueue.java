@@ -8,27 +8,27 @@ public class LoopQueue<E> implements Queue<E> {
     private E[] data;
     private int front, tail;
 
-    public LoopQueue(int capacity){
-        data = (E[])new Object[capacity + 1];
+    public LoopQueue(int capacity) {
+        data = (E[]) new Object[capacity + 1];
         front = 0;
         tail = 0;
     }
 
-    public LoopQueue(){
+    public LoopQueue() {
         this(10);
     }
 
-    public int getCapacity(){
+    public int getCapacity() {
         return data.length - 1;
     }
 
     @Override
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return front == tail;
     }
 
     @Override
-    public int getSize(){
+    public int getSize() {
         // 注意此时getSize的逻辑:
         // 如果tail >= front，非常简单，队列中的元素个数就是tail - front
         // 如果tail < front，说明我们的循环队列"循环"起来了，此时，队列中的元素个数为：
@@ -41,9 +41,9 @@ public class LoopQueue<E> implements Queue<E> {
     }
 
     @Override
-    public void enqueue(E e){
+    public void enqueue(E e) {
 
-        if((tail + 1) % data.length == front)
+        if ((tail + 1) % data.length == front)
             resize(getCapacity() * 2);
 
         data[tail] = e;
@@ -51,31 +51,31 @@ public class LoopQueue<E> implements Queue<E> {
     }
 
     @Override
-    public E dequeue(){
+    public E dequeue() {
 
-        if(isEmpty())
+        if (isEmpty())
             throw new IllegalArgumentException("Cannot dequeue from an empty queue.");
 
         E ret = data[front];
         data[front] = null;
         front = (front + 1) % data.length;
-        if(getSize() == getCapacity() / 4 && getCapacity() / 2 != 0)
+        if (getSize() == getCapacity() / 4 && getCapacity() / 2 != 0)
             resize(getCapacity() / 2);
         return ret;
     }
 
     @Override
-    public E getFront(){
-        if(isEmpty())
+    public E getFront() {
+        if (isEmpty())
             throw new IllegalArgumentException("Queue is empty.");
         return data[front];
     }
 
-    private void resize(int newCapacity){
+    private void resize(int newCapacity) {
 
-        E[] newData = (E[])new Object[newCapacity + 1];
+        E[] newData = (E[]) new Object[newCapacity + 1];
         int sz = getSize();
-        for(int i = 0 ; i < sz ; i ++)
+        for (int i = 0; i < sz; i++)
             newData[i] = data[(i + front) % data.length];
 
         data = newData;
@@ -84,28 +84,28 @@ public class LoopQueue<E> implements Queue<E> {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
 
         StringBuilder res = new StringBuilder();
         res.append(String.format("Queue: size = %d , capacity = %d\n", getSize(), getCapacity()));
         res.append("front [");
-        for(int i = front ; i != tail ; i = (i + 1) % data.length){
+        for (int i = front; i != tail; i = (i + 1) % data.length) {
             res.append(data[i]);
-            if((i + 1) % data.length != tail)
+            if ((i + 1) % data.length != tail)
                 res.append(", ");
         }
         res.append("] tail");
         return res.toString();
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         com.jd.structures.L03StacksandQueues.L06LoopQueue.LoopQueue<Integer> queue = new com.jd.structures.L03StacksandQueues.L06LoopQueue.LoopQueue<>();
-        for(int i = 0 ; i < 10 ; i ++){
+        for (int i = 0; i < 10; i++) {
             queue.enqueue(i);
             System.out.println(queue);
 
-            if(i % 3 == 2){
+            if (i % 3 == 2) {
                 queue.dequeue();
                 System.out.println(queue);
             }

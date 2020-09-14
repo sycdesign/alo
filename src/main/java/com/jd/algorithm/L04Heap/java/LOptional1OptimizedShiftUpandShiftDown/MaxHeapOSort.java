@@ -5,18 +5,19 @@ package com.jd.algorithm.L04Heap.java.LOptional1OptimizedShiftUpandShiftDown;
 public class MaxHeapOSort {
 
     // 我们的算法类不允许产生任何实例
-    private MaxHeapOSort(){}
+    private MaxHeapOSort() {
+    }
 
     // 对整个arr数组使用MaxHeapOSort排序
     // MaxHeapOSort, 将所有的元素依次添加到堆中, 在将所有元素从堆中依次取出来, 即完成了排序
-    public static void sort(Comparable[] arr){
+    public static void sort(Comparable[] arr) {
 
         int n = arr.length;
         MaxHeapO<Comparable> maxHeap = new MaxHeapO<Comparable>(n);
-        for( int i = 0 ; i < n ; i ++ )
+        for (int i = 0; i < n; i++)
             maxHeap.insert(arr[i]);
 
-        for( int i = n-1 ; i >= 0 ; i -- )
+        for (int i = n - 1; i >= 0; i--)
             arr[i] = maxHeap.extractMax();
     }
 

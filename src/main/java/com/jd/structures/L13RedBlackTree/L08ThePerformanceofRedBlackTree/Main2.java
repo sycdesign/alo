@@ -16,14 +16,14 @@ public class Main2 {
 
         Random random = new Random(n);
         ArrayList<Integer> testData = new ArrayList<>(n);
-        for(int i = 0 ; i < n ; i ++)
+        for (int i = 0; i < n; i++)
             testData.add(random.nextInt(Integer.MAX_VALUE));
 
         // Test BST
         long startTime = System.nanoTime();
 
         BST<Integer, Integer> bst = new BST<>();
-        for (Integer x: testData)
+        for (Integer x : testData)
             bst.add(x, null);
 
         long endTime = System.nanoTime();
@@ -36,7 +36,7 @@ public class Main2 {
         startTime = System.nanoTime();
 
         AVLTree<Integer, Integer> avl = new AVLTree<>();
-        for (Integer x: testData)
+        for (Integer x : testData)
             avl.add(x, null);
 
         endTime = System.nanoTime();
@@ -49,7 +49,7 @@ public class Main2 {
         startTime = System.nanoTime();
 
         RBTree<Integer, Integer> rbt = new RBTree<>();
-        for (Integer x: testData)
+        for (Integer x : testData)
             rbt.add(x, null);
 
         endTime = System.nanoTime();

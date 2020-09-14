@@ -4,5 +4,6 @@ package com.jd.algorithm.L06UnionFind.Ljava.LOptional01SameCasesTestforUF;
 public interface UF {
 
     public boolean isConnected(int p, int q);
+
     public void unionElements(int p, int q);
 }

@@ -15,18 +15,20 @@
 // 👍 717 👎 0
 
 package leetcode.editor.cn;
+
 //Java：移动零
-public class P283MoveZeroes{
+public class P283MoveZeroes {
     public static void main(String[] args) {
         Solution solution = new P283MoveZeroes().new Solution();
         // TO TEST
     }
-    //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public void moveZeroes(int[] nums) {
 
+    //leetcode submit region begin(Prohibit modification and deletion)
+    class Solution {
+        public void moveZeroes(int[] nums) {
+
+        }
     }
-}
 //leetcode submit region end(Prohibit modification and deletion)
 
 }

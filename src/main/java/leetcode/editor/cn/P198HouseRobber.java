@@ -36,27 +36,28 @@ package leetcode.editor.cn;
 import java.util.Arrays;
 
 //Java：打家劫舍
-public class P198HouseRobber{
+public class P198HouseRobber {
     public static void main(String[] args) {
         Solution solution = new P198HouseRobber().new Solution();
         // TO TEST
     }
+
     //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    //状态
-    //考虑偷取[x...n-1]范围里的房子
+    class Solution {
+        //状态
+        //考虑偷取[x...n-1]范围里的房子
 
-    //状态转移 f0 = max{v0 + f(2),v1 + f(3),...,v(n-3)+fn-1,v(n-2),v(n-1)}
+        //状态转移 f0 = max{v0 + f(2),v1 + f(3),...,v(n-3)+fn-1,v(n-2),v(n-1)}
 
-    int[] memo;
+    /*int[] memo;
     public int rob(int[] nums) {
         memo = new int[nums.length];
         Arrays.fill(memo,-1);
         return tryRob(nums,0);
-    }
+    }*/
 
-    //考虑 nums[index,...nums.size())这个范围的所有房子
-    private int tryRob(int[] nums, int index) {
+        //考虑 nums[index,...nums.size())这个范围的所有房子
+    /*private int tryRob(int[] nums, int index) {
         if(index >= nums.length){
             return 0;
         }
@@ -70,8 +71,28 @@ class Solution {
         memo[index] = res;
 
         return res;
+    }*/
+
+
+        public int rob(int[] nums) {
+            int n = nums.length;
+            if (n == 0){
+                return 0;
+            }
+            // memo[i]表示考虑抢劫nums[i...n-1]所能获得的最大收益
+            int[] memo = new int[n];
+            Arrays.fill(memo, -1);
+            memo[n-1] = nums[n-1];
+
+            for(int i = n-2; i >=0; i--){
+                //memo[i]
+                for(int j = i; j <n;j++){
+                    memo[i] = Math.max(memo[i],nums[j] + (j+2 < n ? memo[j+2] : 0));
+                }
+            }
+            return memo[0];
+        }
     }
-}
 //leetcode submit region end(Prohibit modification and deletion)
 
 }

@@ -1,11 +1,12 @@
 package com.jd.algorithm.L02SortingBasic.java.L05InsertionSort;
 
-public class InsertionSort{
+public class InsertionSort {
 
     // 我们的算法类不允许产生任何实例
-    private InsertionSort(){}
+    private InsertionSort() {
+    }
 
-    public static void sort(Comparable[] arr){
+    public static void sort(Comparable[] arr) {
 
         int n = arr.length;
         for (int i = 0; i < n; i++) {
@@ -20,8 +21,8 @@ public class InsertionSort{
 //                    break;
 
             // 写法2
-            for( int j = i; j > 0 && arr[j].compareTo(arr[j-1]) < 0 ; j--)
-                swap(arr, j, j-1);
+            for (int j = i; j > 0 && arr[j].compareTo(arr[j - 1]) < 0; j--)
+                swap(arr, j, j - 1);
 
         }
     }

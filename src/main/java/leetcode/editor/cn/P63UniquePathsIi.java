@@ -29,18 +29,20 @@
 // 👍 403 👎 0
 
 package leetcode.editor.cn;
+
 //Java：不同路径 II
-public class P63UniquePathsIi{
+public class P63UniquePathsIi {
     public static void main(String[] args) {
         Solution solution = new P63UniquePathsIi().new Solution();
         // TO TEST
     }
+
     //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public int uniquePathsWithObstacles(int[][] obstacleGrid) {
-        return 0;
+    class Solution {
+        public int uniquePathsWithObstacles(int[][] obstacleGrid) {
+            return 0;
+        }
     }
-}
 //leetcode submit region end(Prohibit modification and deletion)
 
 }

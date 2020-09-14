@@ -4,14 +4,15 @@ import java.util.Arrays;
 
 public class Main {
 
-    private Main(){}
+    private Main() {
+    }
 
-    private static Integer[] generateRandomOrderedArray(int n, int rangeL, int rangeR){
+    private static Integer[] generateRandomOrderedArray(int n, int rangeL, int rangeR) {
 
         Integer[] arr = new Integer[n];
 
-        for(int i = 0 ; i < n ; i ++)
-            arr[i] = (int)(Math.random() * (rangeR - rangeL + 1)) + rangeL;
+        for (int i = 0; i < n; i++)
+            arr[i] = (int) (Math.random() * (rangeR - rangeL + 1)) + rangeL;
         Arrays.sort(arr);
         return arr;
     }

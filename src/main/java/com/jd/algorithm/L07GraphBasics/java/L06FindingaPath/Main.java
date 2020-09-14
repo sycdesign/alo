@@ -11,7 +11,7 @@ public class Main {
         g.show();
         System.out.println();
 
-        Path path = new Path(g,0);
+        Path path = new Path(g, 0);
         System.out.println("Path from 0 to 6 : ");
         path.showPath(6);
     }

@@ -3,7 +3,6 @@ package com.jd.structures.L06BinarySearchTree.LOptional03BinaryTreeClassicNonrec
 /// Time   : 2018-05-30
 
 
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
@@ -16,18 +15,17 @@ public class Solution3 {
     public List<Integer> preorderTraversal(TreeNode root) {
 
         ArrayList<Integer> res = new ArrayList<Integer>();
-        if(root == null)
+        if (root == null)
             return res;
 
         Stack<TreeNode> stack = new Stack<TreeNode>();
         TreeNode cur = root;
-        while(cur != null || !stack.isEmpty()){
-            if(cur != null){
+        while (cur != null || !stack.isEmpty()) {
+            if (cur != null) {
                 res.add(cur.val);
                 stack.push(cur);
                 cur = cur.left;
-            }
-            else{
+            } else {
                 cur = stack.pop();
                 cur = cur.right;
             }

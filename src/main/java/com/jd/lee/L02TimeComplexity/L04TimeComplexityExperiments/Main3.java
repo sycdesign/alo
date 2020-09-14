@@ -10,9 +10,9 @@ public class Main3 {
         // 数据规模倍乘测试binarySearch
         // O(logn)
         System.out.println("Test for Binary Search:");
-        for(int i = 10 ; i <= 28 ; i ++){
+        for (int i = 10; i <= 28; i++) {
 
-            int n = (int)Math.pow(2, i);
+            int n = (int) Math.pow(2, i);
             Integer[] arr = MyUtil.generateOrderedArray(n);
 
             long startTime = System.currentTimeMillis();

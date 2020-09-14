@@ -13,7 +13,7 @@ public class ReadGraph {
 
     private Scanner scanner;
 
-    public ReadGraph(Graph graph, String filename){
+    public ReadGraph(Graph graph, String filename) {
 
         readFile(filename);
 
@@ -34,17 +34,15 @@ public class ReadGraph {
                 assert w >= 0 && w < V;
                 graph.addEdge(v, w);
             }
-        }
-        catch (InputMismatchException e) {
+        } catch (InputMismatchException e) {
             String token = scanner.next();
             throw new InputMismatchException("attempts to read an 'int' value from input stream, but the next token is \"" + token + "\"");
-        }
-        catch (NoSuchElementException e) {
+        } catch (NoSuchElementException e) {
             throw new NoSuchElementException("attemps to read an 'int' value from input stream, but there are no more tokens available");
         }
     }
 
-    private void readFile(String filename){
+    private void readFile(String filename) {
         assert filename != null;
         try {
             File file = new File(filename);
@@ -52,11 +50,9 @@ public class ReadGraph {
                 FileInputStream fis = new FileInputStream(file);
                 scanner = new Scanner(new BufferedInputStream(fis), "UTF-8");
                 scanner.useLocale(Locale.ENGLISH);
-            }
-            else
+            } else
                 throw new IllegalArgumentException(filename + " doesn't exist.");
-        }
-        catch (IOException ioe) {
+        } catch (IOException ioe) {
             throw new IllegalArgumentException("Could not open " + filename, ioe);
         }
     }
@@ -74,7 +70,7 @@ public class ReadGraph {
         System.out.println();
 
         DenseGraph g2 = new DenseGraph(13, false);
-        ReadGraph readGraph2 = new ReadGraph(g2 , filename );
+        ReadGraph readGraph2 = new ReadGraph(g2, filename);
         System.out.println("test G1 in Dense Graph:");
         g2.show();
 

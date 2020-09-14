@@ -25,19 +25,21 @@
 // 👍 1216 👎 0
 
 package leetcode.editor.cn;
+
 //Java：爬楼梯
-public class P70ClimbingStairs{
+public class P70ClimbingStairs {
     public static void main(String[] args) {
         Solution solution = new P70ClimbingStairs().new Solution();
         // TO TEST
     }
-    //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public int climbStairs(int n) {
 
-        return 0;
+    //leetcode submit region begin(Prohibit modification and deletion)
+    class Solution {
+        public int climbStairs(int n) {
+
+            return 0;
+        }
     }
-}
 //leetcode submit region end(Prohibit modification and deletion)
 
 }

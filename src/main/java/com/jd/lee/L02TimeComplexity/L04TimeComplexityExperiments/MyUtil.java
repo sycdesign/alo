@@ -5,7 +5,8 @@ package com.jd.lee.L02TimeComplexity.L04TimeComplexityExperiments;
  */
 public class MyUtil {
 
-    private MyUtil(){}
+    private MyUtil() {
+    }
 
     public static Integer[] generateRandomArray(int n, int rangeL, int rangeR) {
 
@@ -13,7 +14,7 @@ public class MyUtil {
 
         Integer[] arr = new Integer[n];
         for (int i = 0; i < n; i++)
-            arr[i] = (int)(Math.random() * (rangeR - rangeL + 1)) + rangeL;
+            arr[i] = (int) (Math.random() * (rangeR - rangeL + 1)) + rangeL;
         return arr;
     }
 

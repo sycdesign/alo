@@ -10,10 +10,10 @@ public class Main4 {
         // 数据规模倍乘测试mergeSort
         // O(nlogn)
         System.out.println("Test for Merge Sort:");
-        for( int i = 10 ; i <= 26 ; i ++ ){
+        for (int i = 10; i <= 26; i++) {
 
-            int n = (int)Math.pow(2,i);
-            Integer[] arr = MyUtil.generateRandomArray(n, 0, 1<<30);
+            int n = (int) Math.pow(2, i);
+            Integer[] arr = MyUtil.generateRandomArray(n, 0, 1 << 30);
 
             long startTime = System.currentTimeMillis();
             MyAlgorithmTester.mergeSort(arr, n);

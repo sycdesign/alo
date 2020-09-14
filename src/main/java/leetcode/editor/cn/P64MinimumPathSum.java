@@ -17,19 +17,21 @@
 // 👍 655 👎 0
 
 package leetcode.editor.cn;
+
 //Java：最小路径和
-public class P64MinimumPathSum{
+public class P64MinimumPathSum {
     public static void main(String[] args) {
         Solution solution = new P64MinimumPathSum().new Solution();
         // TO TEST
     }
-    //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public int minPathSum(int[][] grid) {
 
-        return 0;
+    //leetcode submit region begin(Prohibit modification and deletion)
+    class Solution {
+        public int minPathSum(int[][] grid) {
+
+            return 0;
+        }
     }
-}
 //leetcode submit region end(Prohibit modification and deletion)
 
 }

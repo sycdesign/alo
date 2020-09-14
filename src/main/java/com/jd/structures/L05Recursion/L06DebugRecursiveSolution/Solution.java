@@ -1,7 +1,6 @@
 package com.jd.structures.L05Recursion.L06DebugRecursiveSolution;
 
 
-
 public class Solution {
 
     public ListNode removeElements(ListNode head, int val, int depth) {
@@ -11,7 +10,7 @@ public class Solution {
         System.out.print(depthString);
         System.out.println("Call: remove " + val + " in " + head);
 
-        if(head == null){
+        if (head == null) {
             System.out.print(depthString);
             System.out.println("Return: " + head);
             return head;
@@ -22,9 +21,9 @@ public class Solution {
         System.out.println("After remove " + val + ": " + res);
 
         ListNode ret;
-        if(head.val == val)
+        if (head.val == val)
             ret = res;
-        else{
+        else {
             head.next = res;
             ret = head;
         }
@@ -34,9 +33,9 @@ public class Solution {
         return ret;
     }
 
-    private String generateDepthString(int depth){
+    private String generateDepthString(int depth) {
         StringBuilder res = new StringBuilder();
-        for(int i = 0 ; i < depth ; i ++)
+        for (int i = 0; i < depth; i++)
             res.append("--");
         return res.toString();
     }

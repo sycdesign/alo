@@ -5,7 +5,8 @@ package com.jd.lee.L03UsingArray.L02BinarySearchII;
  */
 public class Util {
 
-    private Util(){}
+    private Util() {
+    }
 
     public static Integer[] generateRandomArray(int n, int rangeL, int rangeR) {
 
@@ -13,7 +14,7 @@ public class Util {
 
         Integer[] arr = new Integer[n];
         for (int i = 0; i < n; i++)
-            arr[i] = (int)(Math.random() * (rangeR - rangeL + 1)) + rangeL;
+            arr[i] = (int) (Math.random() * (rangeR - rangeL + 1)) + rangeL;
         return arr;
     }
 

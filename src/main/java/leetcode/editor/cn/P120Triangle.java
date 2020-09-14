@@ -29,18 +29,19 @@ package leetcode.editor.cn;
 import java.util.List;
 
 //Java：三角形最小路径和
-public class P120Triangle{
+public class P120Triangle {
     public static void main(String[] args) {
         Solution solution = new P120Triangle().new Solution();
         // TO TEST
     }
-    //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public int minimumTotal(List<List<Integer>> triangle) {
 
-        return 0;
+    //leetcode submit region begin(Prohibit modification and deletion)
+    class Solution {
+        public int minimumTotal(List<List<Integer>> triangle) {
+
+            return 0;
+        }
     }
-}
 //leetcode submit region end(Prohibit modification and deletion)
 
 }

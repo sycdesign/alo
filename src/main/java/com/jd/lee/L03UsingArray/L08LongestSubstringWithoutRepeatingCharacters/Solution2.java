@@ -16,23 +16,23 @@ public class Solution2 {
 
         // 在这里, 循环中止的条件可以是 r + 1 < s.length(), 想想看为什么?
         // 感谢课程QQ群 @千千 指出 :)
-        while( r + 1 < s.length() ){
+        while (r + 1 < s.length()) {
 
-            if( r + 1 < s.length() && freq[s.charAt(r+1)] == 0 )
-                freq[s.charAt(++r)] ++;
+            if (r + 1 < s.length() && freq[s.charAt(r + 1)] == 0)
+                freq[s.charAt(++r)]++;
             else    //freq[s[r+1]] == 1
-                freq[s.charAt(l++)] --;
+                freq[s.charAt(l++)]--;
 
-            res = Math.max(res, r-l+1);
+            res = Math.max(res, r - l + 1);
         }
 
         return res;
     }
 
     public static void main(String[] args) {
-        System.out.println((new Solution2()).lengthOfLongestSubstring( "abcabcbb" ));
-        System.out.println((new Solution2()).lengthOfLongestSubstring( "bbbbb" ));
-        System.out.println((new Solution2()).lengthOfLongestSubstring( "pwwkew" ));
-        System.out.println((new Solution2()).lengthOfLongestSubstring( "" ));
+        System.out.println((new Solution2()).lengthOfLongestSubstring("abcabcbb"));
+        System.out.println((new Solution2()).lengthOfLongestSubstring("bbbbb"));
+        System.out.println((new Solution2()).lengthOfLongestSubstring("pwwkew"));
+        System.out.println((new Solution2()).lengthOfLongestSubstring(""));
     }
 }

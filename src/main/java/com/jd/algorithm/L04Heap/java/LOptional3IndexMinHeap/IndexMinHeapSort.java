@@ -4,17 +4,18 @@ package com.jd.algorithm.L04Heap.java.LOptional3IndexMinHeap;
 public class IndexMinHeapSort {
 
     // 我们的算法类不允许产生任何实例
-    private IndexMinHeapSort(){}
+    private IndexMinHeapSort() {
+    }
 
-    public static void sort(Comparable[] arr){
+    public static void sort(Comparable[] arr) {
 
         int n = arr.length;
 
         IndexMinHeap<Comparable> indexMinHeap = new IndexMinHeap<Comparable>(n);
-        for( int i = 0 ; i < n ; i ++ )
-            indexMinHeap.insert( i , arr[i] );
+        for (int i = 0; i < n; i++)
+            indexMinHeap.insert(i, arr[i]);
 
-        for( int i = 0 ; i < n ; i ++ )
+        for (int i = 0; i < n; i++)
             arr[i] = indexMinHeap.extractMin();
     }
 

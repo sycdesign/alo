@@ -10,8 +10,8 @@ class Solution3 {
         dummyHead.next = head;
 
         ListNode prev = dummyHead;
-        while(prev.next != null){
-            if(prev.next.val == val)
+        while (prev.next != null) {
+            if (prev.next.val == val)
                 prev.next = prev.next.next;
             else
                 prev = prev.next;

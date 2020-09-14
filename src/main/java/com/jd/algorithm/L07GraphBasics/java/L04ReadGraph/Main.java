@@ -15,7 +15,7 @@ public class Main {
         System.out.println();
 
         DenseGraph g2 = new DenseGraph(13, false);
-        ReadGraph readGraph2 = new ReadGraph(g2 , filename );
+        ReadGraph readGraph2 = new ReadGraph(g2, filename);
         System.out.println("test G1 in Dense Graph:");
         g2.show();
 

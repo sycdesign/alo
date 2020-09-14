@@ -11,7 +11,7 @@ public class DenseGraph {
     private boolean[][] g;      // 图的具体数据
 
     // 构造函数
-    public DenseGraph( int n , boolean directed ){
+    public DenseGraph(int n, boolean directed) {
         assert n >= 0;
         this.n = n;
         this.m = 0;    // 初始化没有任何边
@@ -21,29 +21,34 @@ public class DenseGraph {
         g = new boolean[n][n];
     }
 
-    public int V(){ return n;} // 返回节点个数
-    public int E(){ return m;} // 返回边的个数
+    public int V() {
+        return n;
+    } // 返回节点个数
+
+    public int E() {
+        return m;
+    } // 返回边的个数
 
     // 向图中添加一个边
-    public void addEdge( int v , int w ){
+    public void addEdge(int v, int w) {
 
-        assert v >= 0 && v < n ;
-        assert w >= 0 && w < n ;
+        assert v >= 0 && v < n;
+        assert w >= 0 && w < n;
 
-        if( hasEdge( v , w ) )
+        if (hasEdge(v, w))
             return;
 
         g[v][w] = true;
-        if( !directed )
+        if (!directed)
             g[w][v] = true;
 
-        m ++;
+        m++;
     }
 
     // 验证图中是否有从v到w的边
-    boolean hasEdge( int v , int w ){
-        assert v >= 0 && v < n ;
-        assert w >= 0 && w < n ;
+    boolean hasEdge(int v, int w) {
+        assert v >= 0 && v < n;
+        assert w >= 0 && w < n;
         return g[v][w];
     }
 
@@ -52,8 +57,8 @@ public class DenseGraph {
     public Iterable<Integer> adj(int v) {
         assert v >= 0 && v < n;
         Vector<Integer> adjV = new Vector<Integer>();
-        for(int i = 0 ; i < n ; i ++ )
-            if( g[v][i] )
+        for (int i = 0; i < n; i++)
+            if (g[v][i])
                 adjV.add(i);
         return adjV;
     }

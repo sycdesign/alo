@@ -49,19 +49,21 @@
 // 👍 640 👎 0
 
 package leetcode.editor.cn;
+
 //Java：移除元素
-public class P27RemoveElement{
+public class P27RemoveElement {
     public static void main(String[] args) {
         Solution solution = new P27RemoveElement().new Solution();
         // TO TEST
     }
-    //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public int removeElement(int[] nums, int val) {
 
-        return 0;
+    //leetcode submit region begin(Prohibit modification and deletion)
+    class Solution {
+        public int removeElement(int[] nums, int val) {
+
+            return 0;
+        }
     }
-}
 //leetcode submit region end(Prohibit modification and deletion)
 
 }

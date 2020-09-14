@@ -15,14 +15,14 @@ public class Solution3 {
 
     public int climbStairs(int n) {
 
-        if(n <= 0)
+        if (n <= 0)
             throw new IllegalArgumentException("n must be greater than zero");
 
-        if(n == 1)
+        if (n == 1)
             return 1;
 
         double sqrt5 = Math.sqrt(5.0);
-        return (int)((Math.pow((1 + sqrt5) / 2, n + 1) - Math.pow((1 - sqrt5) / 2, n + 1)) / sqrt5);
+        return (int) ((Math.pow((1 + sqrt5) / 2, n + 1) - Math.pow((1 - sqrt5) / 2, n + 1)) / sqrt5);
     }
 
     public static void main(String[] args) {

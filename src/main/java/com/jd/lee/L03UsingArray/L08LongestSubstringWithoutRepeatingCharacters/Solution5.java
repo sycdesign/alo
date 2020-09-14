@@ -19,10 +19,10 @@ public class Solution5 {
 
         int l = 0, r = -1; //滑动窗口为s[l...r]
         int res = 0;
-        while(r + 1 < s.length()){
+        while (r + 1 < s.length()) {
 
-            r ++;
-            if(last[s.charAt(r)] != -1)
+            r++;
+            if (last[s.charAt(r)] != -1)
                 l = Math.max(l, last[s.charAt(r)] + 1);
 
             res = Math.max(res, r - l + 1);
@@ -34,9 +34,9 @@ public class Solution5 {
 
     public static void main(String[] args) {
 
-        System.out.println((new Solution5()).lengthOfLongestSubstring( "abcabcbb" ));
-        System.out.println((new Solution5()).lengthOfLongestSubstring( "bbbbb" ));
-        System.out.println((new Solution5()).lengthOfLongestSubstring( "pwwkew" ));
-        System.out.println((new Solution5()).lengthOfLongestSubstring( "" ));
+        System.out.println((new Solution5()).lengthOfLongestSubstring("abcabcbb"));
+        System.out.println((new Solution5()).lengthOfLongestSubstring("bbbbb"));
+        System.out.println((new Solution5()).lengthOfLongestSubstring("pwwkew"));
+        System.out.println((new Solution5()).lengthOfLongestSubstring(""));
     }
 }

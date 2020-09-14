@@ -2,12 +2,11 @@ package com.jd.structures.L05Recursion.L04LinkedListandRecursion;/// Leetcode 20
 /// https://leetcode.com/problems/remove-linked-list-elements/description/
 
 
-
 class Solution5 {
 
     public ListNode removeElements(ListNode head, int val) {
 
-        if(head == null)
+        if (head == null)
             return head;
 
         head.next = removeElements(head.next, val);

@@ -16,31 +16,31 @@ public class Solution1 {
     public boolean canPartition(int[] nums) {
 
         int sum = 0;
-        for(int i = 0 ; i < nums.length ; i ++){
-            if(nums[i] <= 0)
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] <= 0)
                 throw new IllegalArgumentException("numbers in nums must be greater than zero.");
             sum += nums[i];
         }
 
-        if(sum % 2 == 1)
+        if (sum % 2 == 1)
             return false;
 
         memo = new int[nums.length][sum / 2 + 1];
-        for(int i = 0 ; i < nums.length ; i ++)
+        for (int i = 0; i < nums.length; i++)
             Arrays.fill(memo[i], -1);
         return tryPartition(nums, nums.length - 1, sum / 2);
     }
 
     // 使用nums[0...index], 是否可以完全填充一个容量为sum的背包
-    private boolean tryPartition(int[] nums, int index, int sum){
+    private boolean tryPartition(int[] nums, int index, int sum) {
 
-        if(sum == 0)
+        if (sum == 0)
             return true;
 
-        if(sum < 0 || index < 0)
+        if (sum < 0 || index < 0)
             return false;
 
-        if(memo[index][sum] != -1)
+        if (memo[index][sum] != -1)
             return memo[index][sum] == 1;
 
         memo[index][sum] = (tryPartition(nums, index - 1, sum) ||
@@ -49,7 +49,7 @@ public class Solution1 {
         return memo[index][sum] == 1;
     }
 
-    private static void printBool(boolean res){
+    private static void printBool(boolean res) {
         System.out.println(res ? "True" : "False");
     }
 

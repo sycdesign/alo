@@ -11,17 +11,17 @@ public class Main {
 
         // 生成unionElements的测试用例
         Pair<Integer, Integer>[] unionTest = new Pair[n];
-        for(int i = 0 ; i < n ; i ++){
-            int a = (int)(Math.random()*n);
-            int b = (int)(Math.random()*n);
+        for (int i = 0; i < n; i++) {
+            int a = (int) (Math.random() * n);
+            int b = (int) (Math.random() * n);
             unionTest[i] = new Pair<Integer, Integer>(a, b);
         }
 
         // 生成isConnected的测试用例
         Pair<Integer, Integer>[] connectTest = new Pair[n];
-        for(int i = 0 ; i < n ; i ++){
-            int a = (int)(Math.random()*n);
-            int b = (int)(Math.random()*n);
+        for (int i = 0; i < n; i++) {
+            int a = (int) (Math.random() * n);
+            int b = (int) (Math.random() * n);
             connectTest[i] = new Pair<Integer, Integer>(a, b);
         }
 

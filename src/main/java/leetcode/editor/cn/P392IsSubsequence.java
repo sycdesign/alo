@@ -27,28 +27,30 @@
 // 👍 315 👎 0
 
 package leetcode.editor.cn;
+
 //Java：判断子序列
-public class P392IsSubsequence{
+public class P392IsSubsequence {
     public static void main(String[] args) {
         Solution solution = new P392IsSubsequence().new Solution();
         // TO TEST
-        solution.isSubsequence("abc","ahbgdc");
+        solution.isSubsequence("abc", "ahbgdc");
     }
+
     //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public boolean isSubsequence(String s, String t) {
-      int sc = s.length();
-      int tc = t.length();
-      int i = 0,j = 0;
-      while (i < sc && j < tc ){
-          if (s.charAt(i) == t.charAt(j)){
-              i++;
-          }
-          j++;
-      }
-      return i == sc;
+    class Solution {
+        public boolean isSubsequence(String s, String t) {
+            int sc = s.length();
+            int tc = t.length();
+            int i = 0, j = 0;
+            while (i < sc && j < tc) {
+                if (s.charAt(i) == t.charAt(j)) {
+                    i++;
+                }
+                j++;
+            }
+            return i == sc;
+        }
     }
-}
 //leetcode submit region end(Prohibit modification and deletion)
 
 }

@@ -13,7 +13,7 @@ public class Main {
         System.out.println("Pride and Prejudice");
 
         ArrayList<String> words = new ArrayList<>();
-        if(FileOperation.readFile("pride-and-prejudice.txt", words)) {
+        if (FileOperation.readFile("pride-and-prejudice.txt", words)) {
             System.out.println("Total words: " + words.size());
 
             // Collections.sort(words);
@@ -29,7 +29,7 @@ public class Main {
                     bst.add(word, 1);
             }
 
-            for(String word: words)
+            for (String word : words)
                 bst.contains(word);
 
             long endTime = System.nanoTime();
@@ -49,7 +49,7 @@ public class Main {
                     avl.add(word, 1);
             }
 
-            for(String word: words)
+            for (String word : words)
                 avl.contains(word);
 
             endTime = System.nanoTime();

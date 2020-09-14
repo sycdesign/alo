@@ -40,19 +40,21 @@
 // 👍 198 👎 0
 
 package leetcode.editor.cn;
+
 //Java：无重叠区间
-public class P435NonOverlappingIntervals{
+public class P435NonOverlappingIntervals {
     public static void main(String[] args) {
         Solution solution = new P435NonOverlappingIntervals().new Solution();
         // TO TEST
     }
-    //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public int eraseOverlapIntervals(int[][] intervals) {
 
-        return 0;
+    //leetcode submit region begin(Prohibit modification and deletion)
+    class Solution {
+        public int eraseOverlapIntervals(int[][] intervals) {
+
+            return 0;
+        }
     }
-}
 //leetcode submit region end(Prohibit modification and deletion)
 
 }

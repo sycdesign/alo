@@ -20,14 +20,14 @@ public class Main {
         //      3
         //     /
         //    4
-        for(int i = 1 ; i < n ; i ++){
-            uf5.parent[i] = i-1;
-            uf6.parent[i] = i-1;
+        for (int i = 1; i < n; i++) {
+            uf5.parent[i] = i - 1;
+            uf6.parent[i] = i - 1;
         }
 
         // 现在, 我们对两个并查集调用find(4)操作
-        uf5.find(n-1);
-        uf6.find(n-1);
+        uf5.find(n - 1);
+        uf6.find(n - 1);
 
         // 通过show, 我们可以看出, 使用迭代的路径压缩, 我们的并查集变成这个样子:
         //     0

@@ -44,8 +44,8 @@ public class Main {
         // 测试3 测试完全有序的数组
         // 对于完全有序的数组，冒泡排序法也将成为O(n)级别的算法
         swapTimes = 0;
-        N= 10000000;    // 由于插入排序法和冒泡排序法在完全有序的情况下都将成为O(n)算法
-                        // 所以我们的测试数据规模变大，为1000,0000
+        N = 10000000;    // 由于插入排序法和冒泡排序法在完全有序的情况下都将成为O(n)算法
+        // 所以我们的测试数据规模变大，为1000,0000
         System.out.println("Test for ordered array, size = " + N);
 
         arr1 = SortTestHelper.generateNearlyOrderedArray(N, swapTimes);

@@ -19,14 +19,14 @@ public class Solution1 {
 
     public int climbStairs(int n) {
 
-        if(n <= 0)
+        if (n <= 0)
             throw new IllegalArgumentException("n must be greater than zero");
 
-        if(n == 1)
+        if (n == 1)
             return 1;
 
         int prev = 1, cur = 1;
-        for(int i = 3 ; i <= n + 1; i ++){
+        for (int i = 3; i <= n + 1; i++) {
             int f = cur + prev;
             prev = cur;
             cur = f;

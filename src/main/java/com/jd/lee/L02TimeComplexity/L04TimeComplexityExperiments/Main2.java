@@ -10,9 +10,9 @@ public class Main2 {
         // 数据规模倍乘测试selectionSort
         // O(n^2)
         System.out.println("Test for Selection Sort:");
-        for( int i = 10 ; i <= 16 ; i ++ ){
+        for (int i = 10; i <= 16; i++) {
 
-            int n = (int)Math.pow(2,i);
+            int n = (int) Math.pow(2, i);
             Integer[] arr = MyUtil.generateRandomArray(n, 0, 100000000);
 
             long startTime = System.currentTimeMillis();

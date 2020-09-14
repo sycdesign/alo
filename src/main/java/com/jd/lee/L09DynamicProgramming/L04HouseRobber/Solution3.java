@@ -19,16 +19,16 @@ public class Solution3 {
     }
 
     // 考虑抢劫nums[0...index]这个范围的所有房子
-    private int tryRob(int[] nums, int index){
+    private int tryRob(int[] nums, int index) {
 
-        if(index < 0)
+        if (index < 0)
             return 0;
 
-        if(memo[index] != -1)
+        if (memo[index] != -1)
             return memo[index];
 
         int res = 0;
-        for(int i = 0 ; i <= index ; i ++)
+        for (int i = 0; i <= index; i++)
             res = Math.max(res, nums[i] + tryRob(nums, i - 2));
         memo[index] = res;
         return res;

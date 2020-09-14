@@ -17,7 +17,7 @@ public class Solution {
 
     public int lengthOfLIS(int[] nums) {
 
-        if(nums.length == 0)
+        if (nums.length == 0)
             return 0;
 
         // dp[i] 表示最长长度为i的递增子序列, 最后一个数字的最小值
@@ -26,15 +26,14 @@ public class Solution {
 
         int len = 1;
         dp[1] = nums[0];
-        for(int i = 1 ; i < nums.length ; i ++)
-            if(nums[i] > dp[len]){
-                len ++;
+        for (int i = 1; i < nums.length; i++)
+            if (nums[i] > dp[len]) {
+                len++;
                 dp[len] = nums[i];
-            }
-            else{
+            } else {
                 // 我们的dp数组将是一个单调递增的数组, 所以可以使用二分查找法
                 int index = lowerBound(dp, 0, len, nums[i]);
-                if(dp[index] != nums[i])
+                if (dp[index] != nums[i])
                     dp[index] = Math.min(dp[index], nums[i]);
             }
 
@@ -42,12 +41,12 @@ public class Solution {
     }
 
     // lowerBound求出arr[l...r]范围里，大于等于target的第一个元素所在的索引
-    private int lowerBound(int[] arr, int l, int r, int target){
+    private int lowerBound(int[] arr, int l, int r, int target) {
 
         int left = l, right = r + 1;
-        while(left != right){
+        while (left != right) {
             int mid = left + (right - left) / 2;
-            if(arr[mid] >= target)
+            if (arr[mid] >= target)
                 right = mid;
             else // arr[mid] < target
                 left = mid + 1;

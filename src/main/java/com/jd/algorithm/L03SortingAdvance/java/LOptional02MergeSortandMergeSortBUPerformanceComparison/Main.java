@@ -18,7 +18,7 @@ public class Main {
 
         // 比较 Merge Sort 和 Merge Sort BU 两种算法在不优化的情况下的性能效率
         long time1 = 0, time2 = 0;
-        for( int i = 0 ; i < T ; i ++ ) {
+        for (int i = 0; i < T; i++) {
             Integer[] arr1 = SortTestHelper.generateRandomArray(N, 0, N);
             Integer[] arr2 = Arrays.copyOf(arr1, arr1.length);
 
@@ -26,14 +26,15 @@ public class Main {
             time2 += SortTestHelper.testSort2("bobo.algo.MergeSortBU", arr2);
         }
         System.out.println("Without Any Optimization:");
-        System.out.println("Merge Sort    Average Run Time: " + time1/T + " ms");
-        System.out.println("Merge Sort BU Average Run Time: " + time2/T + " ms");
+        System.out.println("Merge Sort    Average Run Time: " + time1 / T + " ms");
+        System.out.println("Merge Sort BU Average Run Time: " + time2 / T + " ms");
         System.out.println();
 
 
         // 比较 Merge Sort 和 Merge Sort BU 两种算法在含优化的情况下的性能效率
-        time1 = 0; time2 = 0;
-        for( int i = 0 ; i < T ; i ++ ) {
+        time1 = 0;
+        time2 = 0;
+        for (int i = 0; i < T; i++) {
             Integer[] arr1 = SortTestHelper.generateRandomArray(N, 0, N);
             Integer[] arr2 = Arrays.copyOf(arr1, arr1.length);
 
@@ -41,8 +42,8 @@ public class Main {
             time2 += SortTestHelper.testSort2("bobo.algo.MergeSortBU2", arr2);
         }
         System.out.println("With Optimization:");
-        System.out.println("Merge Sort    Average Run Time: " + time1/T + " ms");
-        System.out.println("Merge Sort BU Average Run Time: " + time2/T + " ms");
+        System.out.println("Merge Sort    Average Run Time: " + time1 / T + " ms");
+        System.out.println("Merge Sort BU Average Run Time: " + time2 / T + " ms");
 
 
         return;

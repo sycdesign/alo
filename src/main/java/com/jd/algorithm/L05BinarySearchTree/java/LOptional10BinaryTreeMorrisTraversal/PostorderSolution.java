@@ -14,26 +14,25 @@ public class PostorderSolution {
     public List<Integer> postorderTraversal(TreeNode root) {
 
         ArrayList<Integer> res = new ArrayList<Integer>();
-        if(root == null)
+        if (root == null)
             return res;
 
         TreeNode dummyRoot = new TreeNode(-1);
         dummyRoot.left = root;
 
         TreeNode cur = dummyRoot;
-        while(cur != null){
-            if(cur.left == null)
+        while (cur != null) {
+            if (cur.left == null)
                 cur = cur.right;
-            else{
+            else {
                 TreeNode pre = cur.left;
-                while(pre.right != null && pre.right != cur)
+                while (pre.right != null && pre.right != cur)
                     pre = pre.right;
 
-                if(pre.right == null){
+                if (pre.right == null) {
                     pre.right = cur;
                     cur = cur.left;
-                }
-                else{
+                } else {
                     pre.right = null;
                     reverseTraversal(cur.left, res);
                     cur = cur.right;
@@ -43,21 +42,21 @@ public class PostorderSolution {
         return res;
     }
 
-    private void reverseTraversal(TreeNode node, ArrayList<Integer> res){
+    private void reverseTraversal(TreeNode node, ArrayList<Integer> res) {
         int start = res.size();
-        while(node != null){
+        while (node != null) {
             res.add(node.val);
             node = node.right;
         }
 
         int i = start, j = res.size() - 1;
-        while(i < j){
+        while (i < j) {
             Integer t = res.get(i);
             res.set(i, res.get(j));
             res.set(j, t);
 
-            i ++;
-            j --;
+            i++;
+            j--;
         }
     }
 }

@@ -13,26 +13,24 @@ public class InorderSolution {
     public List<Integer> inorderTraversal(TreeNode root) {
 
         ArrayList<Integer> res = new ArrayList<Integer>();
-        if(root == null)
+        if (root == null)
             return res;
 
         TreeNode cur = root;
-        while(cur != null){
+        while (cur != null) {
 
-            if(cur.left == null){
+            if (cur.left == null) {
                 res.add(cur.val);
                 cur = cur.right;
-            }
-            else{
+            } else {
                 TreeNode prev = cur.left;
-                while(prev.right != null && prev.right != cur)
+                while (prev.right != null && prev.right != cur)
                     prev = prev.right;
 
-                if(prev.right == null){
+                if (prev.right == null) {
                     prev.right = cur;
                     cur = cur.left;
-                }
-                else{
+                } else {
                     prev.right = null;
                     res.add(cur.val);
                     cur = cur.right;

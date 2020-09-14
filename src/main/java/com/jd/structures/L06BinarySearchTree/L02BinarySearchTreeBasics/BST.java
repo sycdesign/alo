@@ -16,16 +16,16 @@ public class BST<E extends Comparable<E>> {
     private Node root;
     private int size;
 
-    public BST(){
+    public BST() {
         root = null;
         size = 0;
     }
 
-    public int size(){
+    public int size() {
         return size;
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return size == 0;
     }
 }

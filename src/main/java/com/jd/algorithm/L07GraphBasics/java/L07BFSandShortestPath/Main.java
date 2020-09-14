@@ -12,11 +12,11 @@ public class Main {
 
         // 比较使用深度优先遍历和广度优先遍历获得路径的不同
         // 广度优先遍历获得的是无权图的最短路径
-        Path dfs = new Path(g,0);
+        Path dfs = new Path(g, 0);
         System.out.print("DFS : ");
         dfs.showPath(6);
 
-        ShortestPath bfs = new ShortestPath(g,0);
+        ShortestPath bfs = new ShortestPath(g, 0);
         System.out.print("BFS : ");
         bfs.showPath(6);
 
@@ -29,11 +29,11 @@ public class Main {
 
         // 比较使用深度优先遍历和广度优先遍历获得路径的不同
         // 广度优先遍历获得的是无权图的最短路径
-        Path dfs2 = new Path(g2,0);
+        Path dfs2 = new Path(g2, 0);
         System.out.print("DFS : ");
         dfs2.showPath(3);
 
-        ShortestPath bfs2 = new ShortestPath(g,0);
+        ShortestPath bfs2 = new ShortestPath(g, 0);
         System.out.print("BFS : ");
         bfs.showPath(3);
     }

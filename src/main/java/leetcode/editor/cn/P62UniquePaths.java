@@ -38,18 +38,20 @@
 // 👍 668 👎 0
 
 package leetcode.editor.cn;
+
 //Java：不同路径
-public class P62UniquePaths{
+public class P62UniquePaths {
     public static void main(String[] args) {
         Solution solution = new P62UniquePaths().new Solution();
         // TO TEST
     }
+
     //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public int uniquePaths(int m, int n) {
-        return 0;
+    class Solution {
+        public int uniquePaths(int m, int n) {
+            return 0;
+        }
     }
-}
 //leetcode submit region end(Prohibit modification and deletion)
 
 }

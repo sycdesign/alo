@@ -17,78 +17,78 @@ public class HashTable<K extends Comparable<K>, V> {
     private int size;
     private int M;
 
-    public HashTable(){
+    public HashTable() {
         this.M = capacity[capacityIndex];
         size = 0;
         hashtable = new TreeMap[M];
-        for(int i = 0 ; i < M ; i ++)
+        for (int i = 0; i < M; i++)
             hashtable[i] = new TreeMap<>();
     }
 
-    private int hash(K key){
+    private int hash(K key) {
         return (key.hashCode() & 0x7fffffff) % M;
     }
 
-    public int getSize(){
+    public int getSize() {
         return size;
     }
 
-    public void add(K key, V value){
+    public void add(K key, V value) {
         TreeMap<K, V> map = hashtable[hash(key)];
-        if(map.containsKey(key))
+        if (map.containsKey(key))
             map.put(key, value);
-        else{
+        else {
             map.put(key, value);
-            size ++;
+            size++;
 
-            if(size >= upperTol * M && capacityIndex + 1 < capacity.length){
-                capacityIndex ++;
+            if (size >= upperTol * M && capacityIndex + 1 < capacity.length) {
+                capacityIndex++;
                 resize(capacity[capacityIndex]);
             }
         }
     }
 
-    public V remove(K key){
+    public V remove(K key) {
         V ret = null;
         TreeMap<K, V> map = hashtable[hash(key)];
-        if(map.containsKey(key)){
+        if (map.containsKey(key)) {
             ret = map.remove(key);
-            size --;
+            size--;
 
-            if(size < lowerTol * M && capacityIndex - 1 >= 0){
-                capacityIndex --;
+            if (size < lowerTol * M && capacityIndex - 1 >= 0) {
+                capacityIndex--;
                 resize(capacity[capacityIndex]);
             }
         }
         return ret;
     }
 
-    public void set(K key, V value){
+    public void set(K key, V value) {
         TreeMap<K, V> map = hashtable[hash(key)];
-        if(!map.containsKey(key))
+        if (!map.containsKey(key))
             throw new IllegalArgumentException(key + " doesn't exist!");
 
         map.put(key, value);
     }
 
-    public boolean contains(K key){
+    public boolean contains(K key) {
         return hashtable[hash(key)].containsKey(key);
     }
 
-    public V get(K key){
+    public V get(K key) {
         return hashtable[hash(key)].get(key);
     }
 
-    private void resize(int newM){
+    private void resize(int newM) {
         TreeMap<K, V>[] newHashTable = new TreeMap[newM];
-        for(int i = 0 ; i < newM ; i ++)
+        for (int i = 0; i < newM; i++)
             newHashTable[i] = new TreeMap<>();
 
         int oldM = M;
         this.M = newM;
-        for(int i = 0 ; i < oldM ; i ++){
+        for (int i = 0; i < oldM; i++) {
             TreeMap<K, V> map = hashtable[i];
-            for(K key: map.keySet())
+            for (K key : map.keySet())
                 newHashTable[hash(key)].put(key, map.get(key));
         }
 
