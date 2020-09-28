@@ -1,6 +1,5 @@
 package com.jd.structures.L11UnionFind.L04OptimizedbySize;
 
-//11UnionFind.L01WhatisUnionFind.UF;
 
 // 我们的第三版Union-Find
 public class UnionFind3 implements UF {

@@ -1,9 +1,5 @@
 package com.jd.structures.L11UnionFind.L04OptimizedbySize;
 
-//11UnionFind.L01WhatisUnionFind.UF;
-//11UnionFind.L02QuickFind.UnionFind1;
-//11UnionFind.L03QuickUnion.UnionFind2;
-
 import java.util.Random;
 
 public class Main {
