@@ -172,7 +172,7 @@ public class BSTMap<K extends Comparable<K>, V> implements Map<K, V> {
     System.out.println("Pride and Prejudice");
 
     ArrayList<String> words = new ArrayList<>();
-    if (FileOperation.readFile("pride-and-prejudice.txt", words)) {
+    if (FileOperation.readFile("src/main/resources/pride-and-prejudice.txt", words)) {
       System.out.println("Total words: " + words.size());
 
       com.jd.structures.L07SetandMap.L07BSTMap.BSTMap<String, Integer> map =

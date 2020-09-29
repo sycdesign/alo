@@ -35,7 +35,7 @@ public class TestMapMain {
 
   public static void main(String[] args) {
 
-    String filename = "pride-and-prejudice.txt";
+    String filename = "src/main/resources/pride-and-prejudice.txt";
 
     BSTMap<String, Integer> bstMap = new BSTMap<>();
     double time1 = testMap(bstMap, filename);

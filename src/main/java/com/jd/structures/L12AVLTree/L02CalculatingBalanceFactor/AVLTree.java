@@ -37,13 +37,17 @@ public class AVLTree<K extends Comparable<K>, V> {
 
   // 获得节点node的高度
   private int getHeight(Node node) {
-    if (node == null) return 0;
+    if (node == null) {
+      return 0;
+    }
     return node.height;
   }
 
   // 获得节点node的平衡因子
   private int getBalanceFactor(Node node) {
-    if (node == null) return 0;
+    if (node == null) {
+      return 0;
+    }
     return getHeight(node.left) - getHeight(node.right);
   }
 
@@ -61,30 +65,42 @@ public class AVLTree<K extends Comparable<K>, V> {
       return new Node(key, value);
     }
 
-    if (key.compareTo(node.key) < 0) node.left = add(node.left, key, value);
-    else if (key.compareTo(node.key) > 0) node.right = add(node.right, key, value);
-    else // key.compareTo(node.key) == 0
-    node.value = value;
+    if (key.compareTo(node.key) < 0) {
+      node.left = add(node.left, key, value);
+    } else if (key.compareTo(node.key) > 0) {
+      node.right = add(node.right, key, value);
+    } else {
+      // key.compareTo(node.key) == 0
+      node.value = value;
+    }
 
     // 更新height
     node.height = 1 + Math.max(getHeight(node.left), getHeight(node.right));
 
     // 计算平衡因子
     int balanceFactor = getBalanceFactor(node);
-    if (Math.abs(balanceFactor) > 1) System.out.println("unbalanced : " + balanceFactor);
-
+    if (Math.abs(balanceFactor) > 1) {
+      System.out.println("unbalanced : " + balanceFactor);
+    }
     return node;
   }
 
   // 返回以node为根节点的二分搜索树中，key所在的节点
   private Node getNode(Node node, K key) {
 
-    if (node == null) return null;
+    if (node == null) {
+      return null;
+    }
 
-    if (key.equals(node.key)) return node;
-    else if (key.compareTo(node.key) < 0) return getNode(node.left, key);
-    else // if(key.compareTo(node.key) > 0)
-    return getNode(node.right, key);
+    if (key.equals(node.key)) {
+      return node;
+    } else if (key.compareTo(node.key) < 0) {
+      return getNode(node.left, key);
+    } else {
+//      if(key.compareTo(node.key) > 0)
+      return getNode(node.right, key);
+    }
+
   }
 
   public boolean contains(K key) {
@@ -99,14 +115,18 @@ public class AVLTree<K extends Comparable<K>, V> {
 
   public void set(K key, V newValue) {
     Node node = getNode(root, key);
-    if (node == null) throw new IllegalArgumentException(key + " doesn't exist!");
+    if (node == null) {
+      throw new IllegalArgumentException(key + " doesn't exist!");
+    }
 
     node.value = newValue;
   }
 
   // 返回以node为根的二分搜索树的最小值所在的节点
   private Node minimum(Node node) {
-    if (node.left == null) return node;
+    if (node.left == null) {
+      return node;
+    }
     return minimum(node.left);
   }
 
@@ -146,8 +166,8 @@ public class AVLTree<K extends Comparable<K>, V> {
     } else if (key.compareTo(node.key) > 0) {
       node.right = remove(node.right, key);
       return node;
-    } else { // key.compareTo(node.key) == 0
-
+    } else {
+      // key.compareTo(node.key) == 0
       // 待删除节点左子树为空的情况
       if (node.left == null) {
         Node rightNode = node.right;
@@ -183,14 +203,16 @@ public class AVLTree<K extends Comparable<K>, V> {
     System.out.println("Pride and Prejudice");
 
     ArrayList<String> words = new ArrayList<>();
-    if (FileOperation.readFile("pride-and-prejudice.txt", words)) {
+    if (FileOperation.readFile("src/main/resources/pride-and-prejudice.txt", words)) {
       System.out.println("Total words: " + words.size());
 
-      com.jd.structures.L14HashTable.L05HashTableImplementation.AVLTree<String, Integer> map =
-          new com.jd.structures.L14HashTable.L05HashTableImplementation.AVLTree<>();
+      AVLTree<String, Integer> map = new AVLTree<>();
       for (String word : words) {
-        if (map.contains(word)) map.set(word, map.get(word) + 1);
-        else map.add(word, 1);
+        if (map.contains(word)) {
+          map.set(word, map.get(word) + 1);
+        } else {
+          map.add(word, 1);
+        }
       }
 
       System.out.println("Total different words: " + map.getSize());

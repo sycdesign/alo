@@ -1,10 +1,5 @@
 package com.jd.structures.L07SetandMap.L08MoreaboutMap;
 
-// 07SetandMap.L05MapBasics.Map;
-// 07SetandMap.L06LinkedListMap.LinkedListMap;
-// 07SetandMap.L07BSTMap.BSTMap;
-// 14HashTable.L05HashTableImplementation.FileOperation;
-
 import java.util.ArrayList;
 
 public class Main {
@@ -35,7 +30,7 @@ public class Main {
 
   public static void main(String[] args) {
 
-    String filename = "pride-and-prejudice.txt";
+    String filename = "src/main/resources/pride-and-prejudice.txt";
 
     BSTMap<String, Integer> bstMap = new BSTMap<>();
     double time1 = testMap(bstMap, filename);

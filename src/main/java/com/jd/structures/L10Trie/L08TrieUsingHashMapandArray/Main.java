@@ -11,7 +11,7 @@ public class Main {
   public static void main(String[] args) {
 
     ArrayList<String> words = new ArrayList<>();
-    if (FileOperation.readFile("pride-and-prejudice.txt", words)
+    if (FileOperation.readFile("src/main/resources/pride-and-prejudice.txt", words)
         && FileOperation.readFile("a-tale-of-two-cities.txt", words)) {
 
       // Test BST

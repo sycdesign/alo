@@ -303,7 +303,7 @@ public class AVLTree<K extends Comparable<K>, V> {
     System.out.println("Pride and Prejudice");
 
     ArrayList<String> words = new ArrayList<>();
-    if (FileOperation.readFile("pride-and-prejudice.txt", words)) {
+    if (FileOperation.readFile("src/main/resources/pride-and-prejudice.txt", words)) {
       System.out.println("Total words: " + words.size());
 
       AVLTree<String, Integer> map = new AVLTree<>();
