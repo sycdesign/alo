@@ -1,58 +1,56 @@
 package com.jd.structures.L12AVLTree.L08MapandSetinAVLTree;
 
-//07SetandMap.L05MapBasics.Map;
-//07SetandMap.L06LinkedListMap.LinkedListMap;
-//07SetandMap.L07BSTMap.BSTMap;
-//14HashTable.L05HashTableImplementation.FileOperation;
+// 07SetandMap.L05MapBasics.Map;
+// 07SetandMap.L06LinkedListMap.LinkedListMap;
+// 07SetandMap.L07BSTMap.BSTMap;
+// 14HashTable.L05HashTableImplementation.FileOperation;
 
 import java.util.ArrayList;
 
 public class TestMapMain {
 
-    private static double testMap(Map<String, Integer> map, String filename) {
+  private static double testMap(Map<String, Integer> map, String filename) {
 
-        long startTime = System.nanoTime();
+    long startTime = System.nanoTime();
 
-        System.out.println(filename);
-        ArrayList<String> words = new ArrayList<>();
-        if (FileOperation.readFile(filename, words)) {
-            System.out.println("Total words: " + words.size());
+    System.out.println(filename);
+    ArrayList<String> words = new ArrayList<>();
+    if (FileOperation.readFile(filename, words)) {
+      System.out.println("Total words: " + words.size());
 
-            for (String word : words) {
-                if (map.contains(word))
-                    map.set(word, map.get(word) + 1);
-                else
-                    map.add(word, 1);
-            }
+      for (String word : words) {
+        if (map.contains(word)) map.set(word, map.get(word) + 1);
+        else map.add(word, 1);
+      }
 
-            System.out.println("Total different words: " + map.getSize());
-            System.out.println("Frequency of PRIDE: " + map.get("pride"));
-            System.out.println("Frequency of PREJUDICE: " + map.get("prejudice"));
-        }
-
-        long endTime = System.nanoTime();
-
-        return (endTime - startTime) / 1000000000.0;
+      System.out.println("Total different words: " + map.getSize());
+      System.out.println("Frequency of PRIDE: " + map.get("pride"));
+      System.out.println("Frequency of PREJUDICE: " + map.get("prejudice"));
     }
 
-    public static void main(String[] args) {
+    long endTime = System.nanoTime();
 
-        String filename = "pride-and-prejudice.txt";
+    return (endTime - startTime) / 1000000000.0;
+  }
 
-        BSTMap<String, Integer> bstMap = new BSTMap<>();
-        double time1 = testMap(bstMap, filename);
-        System.out.println("BST Map: " + time1 + " s");
+  public static void main(String[] args) {
 
-        System.out.println();
+    String filename = "pride-and-prejudice.txt";
 
-        LinkedListMap<String, Integer> linkedListMap = new LinkedListMap<>();
-        double time2 = testMap(linkedListMap, filename);
-        System.out.println("Linked List Map: " + time2 + " s");
+    BSTMap<String, Integer> bstMap = new BSTMap<>();
+    double time1 = testMap(bstMap, filename);
+    System.out.println("BST Map: " + time1 + " s");
 
-        System.out.println();
+    System.out.println();
 
-        AVLMap<String, Integer> avlMap = new AVLMap<>();
-        double time3 = testMap(avlMap, filename);
-        System.out.println("AVL Map: " + time3 + " s");
-    }
+    LinkedListMap<String, Integer> linkedListMap = new LinkedListMap<>();
+    double time2 = testMap(linkedListMap, filename);
+    System.out.println("Linked List Map: " + time2 + " s");
+
+    System.out.println();
+
+    AVLMap<String, Integer> avlMap = new AVLMap<>();
+    double time3 = testMap(avlMap, filename);
+    System.out.println("AVL Map: " + time3 + " s");
+  }
 }

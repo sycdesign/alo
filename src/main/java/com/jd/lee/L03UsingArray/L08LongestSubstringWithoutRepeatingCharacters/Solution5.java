@@ -1,4 +1,7 @@
-package com.jd.lee.L03UsingArray.L08LongestSubstringWithoutRepeatingCharacters;// 3. Longest Substring Without Repeating Characters
+package com.jd.lee.L03UsingArray.L08LongestSubstringWithoutRepeatingCharacters; // 3. Longest
+                                                                                // Substring Without
+                                                                                // Repeating
+                                                                                // Characters
 // https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
 //
 // 滑动窗口
@@ -12,31 +15,30 @@ import java.util.Arrays;
 // 空间复杂度: O(len(charset))
 public class Solution5 {
 
-    public int lengthOfLongestSubstring(String s) {
+  public int lengthOfLongestSubstring(String s) {
 
-        int[] last = new int[256];
-        Arrays.fill(last, -1);
+    int[] last = new int[256];
+    Arrays.fill(last, -1);
 
-        int l = 0, r = -1; //滑动窗口为s[l...r]
-        int res = 0;
-        while (r + 1 < s.length()) {
+    int l = 0, r = -1; // 滑动窗口为s[l...r]
+    int res = 0;
+    while (r + 1 < s.length()) {
 
-            r++;
-            if (last[s.charAt(r)] != -1)
-                l = Math.max(l, last[s.charAt(r)] + 1);
+      r++;
+      if (last[s.charAt(r)] != -1) l = Math.max(l, last[s.charAt(r)] + 1);
 
-            res = Math.max(res, r - l + 1);
-            last[s.charAt(r)] = r;
-        }
-
-        return res;
+      res = Math.max(res, r - l + 1);
+      last[s.charAt(r)] = r;
     }
 
-    public static void main(String[] args) {
+    return res;
+  }
 
-        System.out.println((new Solution5()).lengthOfLongestSubstring("abcabcbb"));
-        System.out.println((new Solution5()).lengthOfLongestSubstring("bbbbb"));
-        System.out.println((new Solution5()).lengthOfLongestSubstring("pwwkew"));
-        System.out.println((new Solution5()).lengthOfLongestSubstring(""));
-    }
+  public static void main(String[] args) {
+
+    System.out.println((new Solution5()).lengthOfLongestSubstring("abcabcbb"));
+    System.out.println((new Solution5()).lengthOfLongestSubstring("bbbbb"));
+    System.out.println((new Solution5()).lengthOfLongestSubstring("pwwkew"));
+    System.out.println((new Solution5()).lengthOfLongestSubstring(""));
+  }
 }

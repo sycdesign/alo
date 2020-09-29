@@ -1,32 +1,30 @@
-package com.jd.structures.L05Recursion.L04LinkedListandRecursion;/// Leetcode 203. Remove Linked List Elements
+package com.jd.structures.L05Recursion.L04LinkedListandRecursion; /// Leetcode 203. Remove Linked
+                                                                  // List Elements
 /// https://leetcode.com/problems/remove-linked-list-elements/description/
-
 
 class Solution3 {
 
-    public ListNode removeElements(ListNode head, int val) {
+  public ListNode removeElements(ListNode head, int val) {
 
-        ListNode dummyHead = new ListNode(-1);
-        dummyHead.next = head;
+    ListNode dummyHead = new ListNode(-1);
+    dummyHead.next = head;
 
-        ListNode prev = dummyHead;
-        while (prev.next != null) {
-            if (prev.next.val == val)
-                prev.next = prev.next.next;
-            else
-                prev = prev.next;
-        }
-
-        return dummyHead.next;
+    ListNode prev = dummyHead;
+    while (prev.next != null) {
+      if (prev.next.val == val) prev.next = prev.next.next;
+      else prev = prev.next;
     }
 
-    public static void main(String[] args) {
+    return dummyHead.next;
+  }
 
-        int[] nums = {1, 2, 6, 3, 4, 5, 6};
-        ListNode head = new ListNode(nums);
-        System.out.println(head);
+  public static void main(String[] args) {
 
-        ListNode res = (new Solution3()).removeElements(head, 6);
-        System.out.println(res);
-    }
+    int[] nums = {1, 2, 6, 3, 4, 5, 6};
+    ListNode head = new ListNode(nums);
+    System.out.println(head);
+
+    ListNode res = (new Solution3()).removeElements(head, 6);
+    System.out.println(res);
+  }
 }

@@ -1,4 +1,6 @@
-package com.jd.lee.L06StackandQueue.Optional03ClassicNonRecursivePostorderTraversal.src;/// Source : https://leetcode.com/problems/binary-tree-postorder-traversal/description/
+package com.jd.lee.L06StackandQueue.Optional03ClassicNonRecursivePostorderTraversal.src; /// Source
+                                                                                         // :
+                                                                                         // https://leetcode.com/problems/binary-tree-postorder-traversal/description/
 /// Author : liuyubobobo
 /// Time   : 2018-05-30
 
@@ -13,42 +15,41 @@ import java.util.Stack;
 // Space Complexity: O(h), h is the height of the tree
 public class Solution1 {
 
-    private class TagNode{
-        TreeNode node;
-        boolean isFirst;
-        TagNode(TreeNode node){
-            this.node = node;
-            this.isFirst = false;
-        }
-    };
+  private class TagNode {
+    TreeNode node;
+    boolean isFirst;
 
-    public List<Integer> postorderTraversal(TreeNode root) {
-
-        ArrayList<Integer> res = new ArrayList<Integer>();
-        if(root == null)
-            return res;
-
-        Stack<TagNode> stack = new Stack<>();
-        TreeNode cur = root;
-        while(cur != null || !stack.empty()){
-
-            while(cur != null){
-                stack.push(new TagNode(cur));
-                cur = cur.left;
-            }
-
-            TagNode tagNode = stack.pop();
-            cur = tagNode.node;
-            if(tagNode.isFirst == false){
-                tagNode.isFirst = true;
-                stack.push(tagNode);
-                cur = cur.right;
-            }
-            else{
-                res.add(cur.val);
-                cur = null;
-            }
-        }
-        return res;
+    TagNode(TreeNode node) {
+      this.node = node;
+      this.isFirst = false;
     }
+  };
+
+  public List<Integer> postorderTraversal(TreeNode root) {
+
+    ArrayList<Integer> res = new ArrayList<Integer>();
+    if (root == null) return res;
+
+    Stack<TagNode> stack = new Stack<>();
+    TreeNode cur = root;
+    while (cur != null || !stack.empty()) {
+
+      while (cur != null) {
+        stack.push(new TagNode(cur));
+        cur = cur.left;
+      }
+
+      TagNode tagNode = stack.pop();
+      cur = tagNode.node;
+      if (tagNode.isFirst == false) {
+        tagNode.isFirst = true;
+        stack.push(tagNode);
+        cur = cur.right;
+      } else {
+        res.add(cur.val);
+        cur = null;
+      }
+    }
+    return res;
+  }
 }

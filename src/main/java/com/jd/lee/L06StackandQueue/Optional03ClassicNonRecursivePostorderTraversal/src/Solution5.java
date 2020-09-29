@@ -1,4 +1,6 @@
-package com.jd.lee.L06StackandQueue.Optional03ClassicNonRecursivePostorderTraversal.src;/// Source : https://leetcode.com/problems/binary-tree-postorder-traversal/description/
+package com.jd.lee.L06StackandQueue.Optional03ClassicNonRecursivePostorderTraversal.src; /// Source
+                                                                                         // :
+                                                                                         // https://leetcode.com/problems/binary-tree-postorder-traversal/description/
 /// Author : liuyubobobo
 /// Time   : 2018-05-31
 
@@ -15,34 +17,32 @@ import java.util.Stack;
 // Space Complexity: O(h)
 public class Solution5 {
 
-    public List<Integer> postorderTraversal(TreeNode root) {
+  public List<Integer> postorderTraversal(TreeNode root) {
 
-        ArrayList<Integer> res = new ArrayList<Integer>();
-        if(root == null)
-            return res;
+    ArrayList<Integer> res = new ArrayList<Integer>();
+    if (root == null) return res;
 
-        Stack<TreeNode> stack = new Stack<>();
-        TreeNode pre = null;
-        TreeNode cur = root;
+    Stack<TreeNode> stack = new Stack<>();
+    TreeNode pre = null;
+    TreeNode cur = root;
 
-        while(cur != null || !stack.empty()){
+    while (cur != null || !stack.empty()) {
 
-            while(cur != null){
-                stack.push(cur);
-                cur = cur.left;
-            }
+      while (cur != null) {
+        stack.push(cur);
+        cur = cur.left;
+      }
 
-            cur = stack.pop();
-            if(cur.right == null || pre == cur.right){
-                res.add(cur.val);
-                pre = cur;
-                cur = null;
-            }
-            else{
-                stack.push(cur);
-                cur = cur.right;
-            }
-        }
-        return res;
+      cur = stack.pop();
+      if (cur.right == null || pre == cur.right) {
+        res.add(cur.val);
+        pre = cur;
+        cur = null;
+      } else {
+        stack.push(cur);
+        cur = cur.right;
+      }
     }
+    return res;
+  }
 }

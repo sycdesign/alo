@@ -1,4 +1,7 @@
-package com.jd.structures.L06BinarySearchTree.L09NonRecursionPreorderTraverseinBST;/// Leetcode 144. Binary Tree Preorder Traversal
+package com.jd.structures.L06BinarySearchTree.L09NonRecursionPreorderTraverseinBST; /// Leetcode
+                                                                                    // 144. Binary
+                                                                                    // Tree Preorder
+                                                                                    // Traversal
 /// https://leetcode.com/problems/binary-tree-preorder-traversal/description/
 ///
 /// 课程中在这里暂时没有介绍这个问题
@@ -11,35 +14,32 @@ import java.util.Stack;
 
 public class Solution {
 
-    // Definition for a binary tree node.
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
+  // Definition for a binary tree node.
+  public class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
 
-        TreeNode(int x) {
-            val = x;
-        }
+    TreeNode(int x) {
+      val = x;
+    }
+  }
+
+  public List<Integer> preorderTraversal(TreeNode root) {
+
+    List<Integer> res = new LinkedList<>();
+    if (root == null) return res;
+
+    Stack<TreeNode> stack = new Stack<>();
+    stack.push(root);
+    while (!stack.isEmpty()) {
+      TreeNode cur = stack.pop();
+      res.add(cur.val);
+
+      if (cur.right != null) stack.push(cur.right);
+      if (cur.left != null) stack.push(cur.left);
     }
 
-    public List<Integer> preorderTraversal(TreeNode root) {
-
-        List<Integer> res = new LinkedList<>();
-        if (root == null)
-            return res;
-
-        Stack<TreeNode> stack = new Stack<>();
-        stack.push(root);
-        while (!stack.isEmpty()) {
-            TreeNode cur = stack.pop();
-            res.add(cur.val);
-
-            if (cur.right != null)
-                stack.push(cur.right);
-            if (cur.left != null)
-                stack.push(cur.left);
-        }
-
-        return res;
-    }
+    return res;
+  }
 }

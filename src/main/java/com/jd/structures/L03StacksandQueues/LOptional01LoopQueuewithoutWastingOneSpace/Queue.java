@@ -2,13 +2,13 @@ package com.jd.structures.L03StacksandQueues.LOptional01LoopQueuewithoutWastingO
 
 public interface Queue<E> {
 
-    int getSize();
+  int getSize();
 
-    boolean isEmpty();
+  boolean isEmpty();
 
-    void enqueue(E e);
+  void enqueue(E e);
 
-    E dequeue();
+  E dequeue();
 
-    E getFront();
+  E getFront();
 }

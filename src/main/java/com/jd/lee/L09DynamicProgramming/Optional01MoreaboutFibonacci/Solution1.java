@@ -17,25 +17,23 @@ package com.jd.lee.L09DynamicProgramming.Optional01MoreaboutFibonacci;
 /// 空间复杂度: O(1)
 public class Solution1 {
 
-    public int climbStairs(int n) {
+  public int climbStairs(int n) {
 
-        if (n <= 0)
-            throw new IllegalArgumentException("n must be greater than zero");
+    if (n <= 0) throw new IllegalArgumentException("n must be greater than zero");
 
-        if (n == 1)
-            return 1;
+    if (n == 1) return 1;
 
-        int prev = 1, cur = 1;
-        for (int i = 3; i <= n + 1; i++) {
-            int f = cur + prev;
-            prev = cur;
-            cur = f;
-        }
-        return cur;
+    int prev = 1, cur = 1;
+    for (int i = 3; i <= n + 1; i++) {
+      int f = cur + prev;
+      prev = cur;
+      cur = f;
     }
+    return cur;
+  }
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        System.out.println((new Solution1()).climbStairs(10));
-    }
+    System.out.println((new Solution1()).climbStairs(10));
+  }
 }

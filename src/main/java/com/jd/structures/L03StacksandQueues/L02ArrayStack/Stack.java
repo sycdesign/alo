@@ -2,13 +2,13 @@ package com.jd.structures.L03StacksandQueues.L02ArrayStack;
 
 public interface Stack<E> {
 
-    int getSize();
+  int getSize();
 
-    boolean isEmpty();
+  boolean isEmpty();
 
-    void push(E e);
+  void push(E e);
 
-    E pop();
+  E pop();
 
-    E peek();
+  E peek();
 }

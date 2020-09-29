@@ -8,60 +8,52 @@ package com.jd.lee.L03UsingArray.L06TwoSumII;
 // 空间复杂度: O(1)
 public class Solution2 {
 
-    public int[] twoSum(int[] numbers, int target) {
+  public int[] twoSum(int[] numbers, int target) {
 
-        if (numbers.length < 2 /*|| !isSorted(numbers)*/)
-            throw new IllegalArgumentException("Illegal argument numbers");
+    if (numbers.length < 2 /*|| !isSorted(numbers)*/)
+      throw new IllegalArgumentException("Illegal argument numbers");
 
-        for (int i = 0; i < numbers.length - 1; i++) {
-            int j = binarySearch(numbers, i + 1, numbers.length - 1, target - numbers[i]);
-            if (j != -1) {
-                int[] res = {i + 1, j + 1};
-                return res;
-            }
-        }
-
-        throw new IllegalStateException("The input has no solution");
+    for (int i = 0; i < numbers.length - 1; i++) {
+      int j = binarySearch(numbers, i + 1, numbers.length - 1, target - numbers[i]);
+      if (j != -1) {
+        int[] res = {i + 1, j + 1};
+        return res;
+      }
     }
 
-    private int binarySearch(int[] nums, int l, int r, int target) {
+    throw new IllegalStateException("The input has no solution");
+  }
 
-        if (l < 0 || l > nums.length)
-            throw new IllegalArgumentException("l is out of bound");
+  private int binarySearch(int[] nums, int l, int r, int target) {
 
-        if (r < 0 || r > nums.length)
-            throw new IllegalArgumentException("r is out of bound");
+    if (l < 0 || l > nums.length) throw new IllegalArgumentException("l is out of bound");
 
-        while (l <= r) {
-            int mid = l + (r - l) / 2;
-            if (nums[mid] == target)
-                return mid;
-            if (target > nums[mid])
-                l = mid + 1;
-            else
-                r = mid - 1;
-        }
+    if (r < 0 || r > nums.length) throw new IllegalArgumentException("r is out of bound");
 
-        return -1;
+    while (l <= r) {
+      int mid = l + (r - l) / 2;
+      if (nums[mid] == target) return mid;
+      if (target > nums[mid]) l = mid + 1;
+      else r = mid - 1;
     }
 
-    private boolean isSorted(int[] numbers) {
-        for (int i = 1; i < numbers.length; i++)
-            if (numbers[i] < numbers[i - 1])
-                return false;
-        return true;
-    }
+    return -1;
+  }
 
-    private static void printArr(int[] nums) {
-        for (int num : nums)
-            System.out.print(num + " ");
-        System.out.println();
-    }
+  private boolean isSorted(int[] numbers) {
+    for (int i = 1; i < numbers.length; i++) if (numbers[i] < numbers[i - 1]) return false;
+    return true;
+  }
 
-    public static void main(String[] args) {
+  private static void printArr(int[] nums) {
+    for (int num : nums) System.out.print(num + " ");
+    System.out.println();
+  }
 
-        int[] nums = {2, 7, 11, 15};
-        int target = 9;
-        printArr((new Solution2()).twoSum(nums, target));
-    }
+  public static void main(String[] args) {
+
+    int[] nums = {2, 7, 11, 15};
+    int target = 9;
+    printArr((new Solution2()).twoSum(nums, target));
+  }
 }

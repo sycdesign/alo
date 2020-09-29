@@ -10,26 +10,29 @@ import java.util.List;
 /// 空间复杂度: O(h), h为树的高度
 public class Solution144 {
 
-    // Definition for a binary tree node.
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode(int x) { val = x; }
-    }
+  // Definition for a binary tree node.
+  public class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
 
-    public List<Integer> preorderTraversal(TreeNode root) {
-
-        ArrayList<Integer> res = new ArrayList<Integer>();
-        preorderTraversal(root, res);
-        return res;
+    TreeNode(int x) {
+      val = x;
     }
+  }
 
-    private void preorderTraversal(TreeNode node, List<Integer> list){
-        if(node != null){
-            list.add(node.val);
-            preorderTraversal(node.left, list);
-            preorderTraversal(node.right, list);
-        }
+  public List<Integer> preorderTraversal(TreeNode root) {
+
+    ArrayList<Integer> res = new ArrayList<Integer>();
+    preorderTraversal(root, res);
+    return res;
+  }
+
+  private void preorderTraversal(TreeNode node, List<Integer> list) {
+    if (node != null) {
+      list.add(node.val);
+      preorderTraversal(node.left, list);
+      preorderTraversal(node.right, list);
     }
+  }
 }

@@ -1,4 +1,5 @@
-package com.jd.lee.L06StackandQueue.Optional02ClassicNonRecursiveInorderTraversal.src;/// Source : https://leetcode.com/problems/binary-tree-inorder-traversal/solution/
+package com.jd.lee.L06StackandQueue.Optional02ClassicNonRecursiveInorderTraversal.src; /// Source :
+                                                                                       // https://leetcode.com/problems/binary-tree-inorder-traversal/solution/
 /// Author : liuyubobobo
 /// Time   : 2018-05-30
 
@@ -13,25 +14,24 @@ import java.util.Stack;
 // Space Complexity: O(h), h is the height of the tree
 public class Solution1 {
 
-    public List<Integer> inorderTraversal(TreeNode root) {
+  public List<Integer> inorderTraversal(TreeNode root) {
 
-        ArrayList<Integer> res = new ArrayList<Integer>();
-        if(root == null)
-            return res;
+    ArrayList<Integer> res = new ArrayList<Integer>();
+    if (root == null) return res;
 
-        Stack<TreeNode> stack = new Stack<>();
-        TreeNode cur = root;
-        while(cur != null || !stack.empty()){
+    Stack<TreeNode> stack = new Stack<>();
+    TreeNode cur = root;
+    while (cur != null || !stack.empty()) {
 
-            while(cur != null){
-                stack.push(cur);
-                cur = cur.left;
-            }
+      while (cur != null) {
+        stack.push(cur);
+        cur = cur.left;
+      }
 
-            cur = stack.pop();
-            res.add(cur.val);
-            cur = cur.right;
-        }
-        return res;
+      cur = stack.pop();
+      res.add(cur.val);
+      cur = cur.right;
     }
+    return res;
+  }
 }

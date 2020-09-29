@@ -1,4 +1,6 @@
-package com.jd.lee.L06StackandQueue.Optional03ClassicNonRecursivePostorderTraversal.src;/// Source : https://leetcode.com/problems/binary-tree-postorder-traversal/description/
+package com.jd.lee.L06StackandQueue.Optional03ClassicNonRecursivePostorderTraversal.src; /// Source
+                                                                                         // :
+                                                                                         // https://leetcode.com/problems/binary-tree-postorder-traversal/description/
 /// Author : liuyubobobo
 /// Time   : 2018-05-31
 
@@ -13,33 +15,29 @@ import java.util.Stack;
 // Space Complexity: O(h)
 public class Solution4 {
 
-    public List<Integer> postorderTraversal(TreeNode root) {
+  public List<Integer> postorderTraversal(TreeNode root) {
 
-        ArrayList<Integer> res = new ArrayList<Integer>();
-        if(root == null)
-            return res;
+    ArrayList<Integer> res = new ArrayList<Integer>();
+    if (root == null) return res;
 
-        Stack<TreeNode> stack = new Stack<>();
-        TreeNode pre = null;
+    Stack<TreeNode> stack = new Stack<>();
+    TreeNode pre = null;
 
-        stack.push(root);
-        while(!stack.empty()){
+    stack.push(root);
+    while (!stack.empty()) {
 
-            TreeNode cur = stack.pop();
-            if((cur.left == null && cur.right == null) ||
-                    (pre != null && pre == cur.left && cur.right == null) ||
-                    (pre != null && pre == cur.right)){
-                res.add(cur.val);
-                pre = cur;
-            }
-            else{
-                stack.push(cur);
-                if(cur.right != null)
-                    stack.push(cur.right);
-                if(cur.left != null)
-                    stack.push(cur.left);
-            }
-        }
-        return res;
+      TreeNode cur = stack.pop();
+      if ((cur.left == null && cur.right == null)
+          || (pre != null && pre == cur.left && cur.right == null)
+          || (pre != null && pre == cur.right)) {
+        res.add(cur.val);
+        pre = cur;
+      } else {
+        stack.push(cur);
+        if (cur.right != null) stack.push(cur.right);
+        if (cur.left != null) stack.push(cur.left);
+      }
     }
+    return res;
+  }
 }

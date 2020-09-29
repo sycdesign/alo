@@ -2,13 +2,13 @@ package com.jd.structures.L03StacksandQueues.L05ArrayQueue;
 
 public interface Queue<E> {
 
-    int getSize();
+  int getSize();
 
-    boolean isEmpty();
+  boolean isEmpty();
 
-    void enqueue(E e);
+  void enqueue(E e);
 
-    E dequeue();
+  E dequeue();
 
-    E getFront();
+  E getFront();
 }

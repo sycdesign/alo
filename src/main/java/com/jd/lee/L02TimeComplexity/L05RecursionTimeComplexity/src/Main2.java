@@ -1,37 +1,34 @@
 package com.jd.lee.L02TimeComplexity.L05RecursionTimeComplexity.src;
 
-/**
- * Created by liuyubobobo.
- */
+/** Created by liuyubobobo. */
 public class Main2 {
 
-    // f
-    private static int f(int n) {
+  // f
+  private static int f(int n) {
 
-        assert (n >= 0);
+    assert (n >= 0);
 
-        if (n == 0)
-            return 1;
+    if (n == 0) return 1;
 
-        return f(n - 1) + f(n - 1);
-    }
+    return f(n - 1) + f(n - 1);
+  }
 
-    /*
-    // mergeSort
-    private static void mergeSort(Comparable[] arr, int l, int r){
+  /*
+  // mergeSort
+  private static void mergeSort(Comparable[] arr, int l, int r){
 
-        if(l >= r)
-            return;
+      if(l >= r)
+          return;
 
-        int mid = (l+r)/2;
-        mergeSort(arr, l, mid);
-        mergeSort(arr, mid + 1, r);
-        merge(arr, l, mid, r);
-    }
-    */
+      int mid = (l+r)/2;
+      mergeSort(arr, l, mid);
+      mergeSort(arr, mid + 1, r);
+      merge(arr, l, mid, r);
+  }
+  */
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        System.out.println(f(10));
-    }
+    System.out.println(f(10));
+  }
 }

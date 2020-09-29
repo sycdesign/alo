@@ -1,15 +1,15 @@
 package com.jd.algorithm.L09ShortestPath.java.L05ImplementationofBellmanFord;
 
 interface WeightedGraph<Weight extends Number & Comparable> {
-    public int V();
+  public int V();
 
-    public int E();
+  public int E();
 
-    public void addEdge(Edge<Weight> e);
+  public void addEdge(Edge<Weight> e);
 
-    boolean hasEdge(int v, int w);
+  boolean hasEdge(int v, int w);
 
-    void show();
+  void show();
 
-    public Iterable<Edge<Weight>> adj(int v);
+  public Iterable<Edge<Weight>> adj(int v);
 }

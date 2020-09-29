@@ -9,32 +9,32 @@ import java.util.Arrays;
 /// 空间复杂度: O(1)
 public class Solution2 {
 
-    public int findContentChildren(int[] g, int[] s) {
+  public int findContentChildren(int[] g, int[] s) {
 
-        Arrays.sort(g);
-        Arrays.sort(s);
+    Arrays.sort(g);
+    Arrays.sort(s);
 
-        int gi = 0, si = 0;
-        int res = 0;
-        while (gi < g.length && si < s.length) {
-            if (s[si] >= g[gi]) {
-                res++;
-                gi++;
-            }
-            si++;
-        }
-
-        return res;
+    int gi = 0, si = 0;
+    int res = 0;
+    while (gi < g.length && si < s.length) {
+      if (s[si] >= g[gi]) {
+        res++;
+        gi++;
+      }
+      si++;
     }
 
-    public static void main(String[] args) {
+    return res;
+  }
 
-        int g1[] = {1, 2, 3};
-        int s1[] = {1, 1};
-        System.out.println((new Solution2()).findContentChildren(g1, s1));
+  public static void main(String[] args) {
 
-        int g2[] = {1, 2};
-        int s2[] = {1, 2, 3};
-        System.out.println((new Solution2()).findContentChildren(g2, s2));
-    }
+    int g1[] = {1, 2, 3};
+    int s1[] = {1, 1};
+    System.out.println((new Solution2()).findContentChildren(g1, s1));
+
+    int g2[] = {1, 2};
+    int s2[] = {1, 2, 3};
+    System.out.println((new Solution2()).findContentChildren(g2, s2));
+  }
 }

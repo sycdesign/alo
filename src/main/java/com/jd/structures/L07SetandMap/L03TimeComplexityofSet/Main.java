@@ -1,45 +1,43 @@
 package com.jd.structures.L07SetandMap.L03TimeComplexityofSet;
 
-//07SetandMap.L01SetBasicsandBSTSet.BSTSet;
-//07SetandMap.L01SetBasicsandBSTSet.Set;
-//07SetandMap.L02LinkedListSet.LinkedListSet;
-//14HashTable.L05HashTableImplementation.FileOperation;
+// 07SetandMap.L01SetBasicsandBSTSet.BSTSet;
+// 07SetandMap.L01SetBasicsandBSTSet.Set;
+// 07SetandMap.L02LinkedListSet.LinkedListSet;
+// 14HashTable.L05HashTableImplementation.FileOperation;
 
 import java.util.ArrayList;
 
 public class Main {
 
-    private static double testSet(Set<String> set, String filename) {
+  private static double testSet(Set<String> set, String filename) {
 
-        long startTime = System.nanoTime();
+    long startTime = System.nanoTime();
 
-        System.out.println(filename);
-        ArrayList<String> words = new ArrayList<>();
-        if (FileOperation.readFile(filename, words)) {
-            System.out.println("Total words: " + words.size());
+    System.out.println(filename);
+    ArrayList<String> words = new ArrayList<>();
+    if (FileOperation.readFile(filename, words)) {
+      System.out.println("Total words: " + words.size());
 
-            for (String word : words)
-                set.add(word);
-            System.out.println("Total different words: " + set.getSize());
-        }
-        long endTime = System.nanoTime();
-
-        return (endTime - startTime) / 1000000000.0;
+      for (String word : words) set.add(word);
+      System.out.println("Total different words: " + set.getSize());
     }
+    long endTime = System.nanoTime();
 
-    public static void main(String[] args) {
+    return (endTime - startTime) / 1000000000.0;
+  }
 
-        String filename = "pride-and-prejudice.txt";
+  public static void main(String[] args) {
 
-        BSTSet<String> bstSet = new BSTSet<>();
-        double time1 = testSet(bstSet, filename);
-        System.out.println("BST Set: " + time1 + " s");
+    String filename = "pride-and-prejudice.txt";
 
-        System.out.println();
+    BSTSet<String> bstSet = new BSTSet<>();
+    double time1 = testSet(bstSet, filename);
+    System.out.println("BST Set: " + time1 + " s");
 
-        LinkedListSet<String> linkedListSet = new LinkedListSet<>();
-        double time2 = testSet(linkedListSet, filename);
-        System.out.println("Linked List Set: " + time2 + " s");
+    System.out.println();
 
-    }
+    LinkedListSet<String> linkedListSet = new LinkedListSet<>();
+    double time2 = testSet(linkedListSet, filename);
+    System.out.println("Linked List Set: " + time2 + " s");
+  }
 }

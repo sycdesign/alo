@@ -1,4 +1,4 @@
-package com.jd.algorithm.L05BinarySearchTree.java.LOptional09BinaryTreeClassicNonrecursiveTraversal.LPostorder;/// Source : https://leetcode.com/problems/binary-tree-postorder-traversal/description/
+package com.jd.algorithm.L05BinarySearchTree.java.LOptional09BinaryTreeClassicNonrecursiveTraversal.LPostorder; /// Source : https://leetcode.com/problems/binary-tree-postorder-traversal/description/
 /// Author : liuyubobobo
 /// Time   : 2018-07-03
 
@@ -14,26 +14,25 @@ import java.util.Stack;
 // Space Complexity: O(n)
 public class Solution3 {
 
-    public List<Integer> postorderTraversal(TreeNode root) {
+  public List<Integer> postorderTraversal(TreeNode root) {
 
-        Stack<TreeNode> stack = new Stack<>();
-        LinkedList<TreeNode> output = new LinkedList<>();
+    Stack<TreeNode> stack = new Stack<>();
+    LinkedList<TreeNode> output = new LinkedList<>();
 
-        TreeNode p = root;
-        while (p != null || !stack.isEmpty()) {
-            if (p != null) {
-                stack.push(p);
-                output.push(p);
-                p = p.right;
-            } else {
-                p = stack.pop();
-                p = p.left;
-            }
-        }
-
-        ArrayList<Integer> res = new ArrayList<>();
-        while (!output.isEmpty())
-            res.add(output.pop().val);
-        return res;
+    TreeNode p = root;
+    while (p != null || !stack.isEmpty()) {
+      if (p != null) {
+        stack.push(p);
+        output.push(p);
+        p = p.right;
+      } else {
+        p = stack.pop();
+        p = p.left;
+      }
     }
+
+    ArrayList<Integer> res = new ArrayList<>();
+    while (!output.isEmpty()) res.add(output.pop().val);
+    return res;
+  }
 }

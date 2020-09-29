@@ -9,13 +9,13 @@ import java.util.Arrays;
  */
 public class Main {
 
-    public static void main(String[] args) {
-        System.out.println(Math.pow(2D, 13D));
-        Integer[] array = Util.generateRandomArray(1 << 13 + 1, 0, 200);
-        Arrays.sort(array);
-        Arrays.parallelSort(array);
-        for (Integer in : array) {
-            System.out.println(in);
-        }
+  public static void main(String[] args) {
+    System.out.println(Math.pow(2D, 13D));
+    Integer[] array = Util.generateRandomArray(1 << 13 + 1, 0, 200);
+    Arrays.sort(array);
+    Arrays.parallelSort(array);
+    for (Integer in : array) {
+      System.out.println(in);
     }
+  }
 }

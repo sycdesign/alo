@@ -8,43 +8,39 @@ package com.jd.lee.L03UsingArray.L06TwoSumII;
 // 空间复杂度: O(1)
 public class Solution3 {
 
-    public int[] twoSum(int[] numbers, int target) {
+  public int[] twoSum(int[] numbers, int target) {
 
-        if (numbers.length < 2 /*|| !isSorted(numbers)*/)
-            throw new IllegalArgumentException("Illegal argument numbers");
+    if (numbers.length < 2 /*|| !isSorted(numbers)*/)
+      throw new IllegalArgumentException("Illegal argument numbers");
 
-        int l = 0, r = numbers.length - 1;
-        while (l < r) {
+    int l = 0, r = numbers.length - 1;
+    while (l < r) {
 
-            if (numbers[l] + numbers[r] == target) {
-                int[] res = {l + 1, r + 1};
-                return res;
-            } else if (numbers[l] + numbers[r] < target)
-                l++;
-            else // numbers[l] + numbers[r] > target
-                r--;
-        }
-
-        throw new IllegalStateException("The input has no solution");
+      if (numbers[l] + numbers[r] == target) {
+        int[] res = {l + 1, r + 1};
+        return res;
+      } else if (numbers[l] + numbers[r] < target) l++;
+      else // numbers[l] + numbers[r] > target
+      r--;
     }
 
-    private boolean isSorted(int[] numbers) {
-        for (int i = 1; i < numbers.length; i++)
-            if (numbers[i] < numbers[i - 1])
-                return false;
-        return true;
-    }
+    throw new IllegalStateException("The input has no solution");
+  }
 
-    private static void printArr(int[] nums) {
-        for (int num : nums)
-            System.out.print(num + " ");
-        System.out.println();
-    }
+  private boolean isSorted(int[] numbers) {
+    for (int i = 1; i < numbers.length; i++) if (numbers[i] < numbers[i - 1]) return false;
+    return true;
+  }
 
-    public static void main(String[] args) {
+  private static void printArr(int[] nums) {
+    for (int num : nums) System.out.print(num + " ");
+    System.out.println();
+  }
 
-        int[] nums = {2, 7, 11, 15};
-        int target = 9;
-        printArr((new Solution3()).twoSum(nums, target));
-    }
+  public static void main(String[] args) {
+
+    int[] nums = {2, 7, 11, 15};
+    int target = 9;
+    printArr((new Solution3()).twoSum(nums, target));
+  }
 }

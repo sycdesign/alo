@@ -1,31 +1,26 @@
 package com.jd.lee.L02TimeComplexity.L04TimeComplexityExperiments;
 
-/**
- * Created by liuyubobobo.
- */
+/** Created by liuyubobobo. */
 public class MyUtil {
 
-    private MyUtil() {
-    }
+  private MyUtil() {}
 
-    public static Integer[] generateRandomArray(int n, int rangeL, int rangeR) {
+  public static Integer[] generateRandomArray(int n, int rangeL, int rangeR) {
 
-        assert n > 0 && rangeL <= rangeR;
+    assert n > 0 && rangeL <= rangeR;
 
-        Integer[] arr = new Integer[n];
-        for (int i = 0; i < n; i++)
-            arr[i] = (int) (Math.random() * (rangeR - rangeL + 1)) + rangeL;
-        return arr;
-    }
+    Integer[] arr = new Integer[n];
+    for (int i = 0; i < n; i++) arr[i] = (int) (Math.random() * (rangeR - rangeL + 1)) + rangeL;
+    return arr;
+  }
 
-    public static Integer[] generateOrderedArray(int n) {
+  public static Integer[] generateOrderedArray(int n) {
 
-        assert n > 0;
+    assert n > 0;
 
-        Integer[] arr = new Integer[n];
+    Integer[] arr = new Integer[n];
 
-        for (int i = 0; i < n; i++)
-            arr[i] = i;
-        return arr;
-    }
+    for (int i = 0; i < n; i++) arr[i] = i;
+    return arr;
+  }
 }

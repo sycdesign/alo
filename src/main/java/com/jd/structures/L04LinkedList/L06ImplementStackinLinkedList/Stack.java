@@ -2,13 +2,13 @@ package com.jd.structures.L04LinkedList.L06ImplementStackinLinkedList;
 
 public interface Stack<E> {
 
-    int getSize();
+  int getSize();
 
-    boolean isEmpty();
+  boolean isEmpty();
 
-    void push(E e);
+  void push(E e);
 
-    E pop();
+  E pop();
 
-    E peek();
+  E peek();
 }

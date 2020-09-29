@@ -3,36 +3,34 @@ package com.jd.lee.L09DynamicProgramming.L01Fibonacci;
 // 递归求斐波那契数列
 public class Solution1 {
 
-    private long num = 0;
+  private long num = 0;
 
-    public int fib(int n) {
+  public int fib(int n) {
 
-        num++;
+    num++;
 
-        if (n == 0)
-            return 0;
+    if (n == 0) return 0;
 
-        if (n == 1)
-            return 1;
+    if (n == 1) return 1;
 
-        return fib(n - 1) + fib(n - 2);
-    }
+    return fib(n - 1) + fib(n - 2);
+  }
 
-    public long getNum() {
-        return num;
-    }
+  public long getNum() {
+    return num;
+  }
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        int n = 45;
+    int n = 45;
 
-        Solution1 solution = new Solution1();
-        long startTime = System.currentTimeMillis();
-        int res = solution.fib(n);
-        long endTime = System.currentTimeMillis();
+    Solution1 solution = new Solution1();
+    long startTime = System.currentTimeMillis();
+    int res = solution.fib(n);
+    long endTime = System.currentTimeMillis();
 
-        System.out.println("fib(" + n + ") = " + res);
-        System.out.println("time : " + (endTime - startTime) + " ms");
-        System.out.println("run function fib() " + solution.getNum() + " times.");
-    }
+    System.out.println("fib(" + n + ") = " + res);
+    System.out.println("time : " + (endTime - startTime) + " ms");
+    System.out.println("run function fib() " + solution.getNum() + " times.");
+  }
 }

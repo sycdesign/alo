@@ -1,4 +1,5 @@
-package com.jd.lee.L06StackandQueue.Optional05WordLadder.src;/// Source : https://leetcode.com/problems/word-ladder/description/
+package com.jd.lee.L06StackandQueue.Optional05WordLadder.src; /// Source :
+                                                              // https://leetcode.com/problems/word-ladder/description/
 /// Author : liuyubobobo
 /// Time   : 2018-03-27
 
@@ -15,74 +16,69 @@ import javafx.util.Pair;
 /// Space Complexity: O(n)
 public class Solution2 {
 
-    public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+  public int ladderLength(String beginWord, String endWord, List<String> wordList) {
 
-        HashSet<String> wordSet = new HashSet<>();
-        for(String word: wordList)
-            wordSet.add(word);
+    HashSet<String> wordSet = new HashSet<>();
+    for (String word : wordList) wordSet.add(word);
 
-        // bfs
-        LinkedList<Pair<String, Integer>> q = new LinkedList<>();
-        q.addLast(new Pair<>(beginWord, 1));
-        wordSet.remove(beginWord);
+    // bfs
+    LinkedList<Pair<String, Integer>> q = new LinkedList<>();
+    q.addLast(new Pair<>(beginWord, 1));
+    wordSet.remove(beginWord);
 
-        HashSet<String> visited = new HashSet<>();
+    HashSet<String> visited = new HashSet<>();
 
-        while(!q.isEmpty()){
+    while (!q.isEmpty()) {
 
-            String curWord = q.getFirst().getKey();
-            int curStep = q.getFirst().getValue();
-            q.removeFirst();
+      String curWord = q.getFirst().getKey();
+      int curStep = q.getFirst().getValue();
+      q.removeFirst();
 
-            visited.clear();
-            for(String word: wordSet){
-                if(similar(word, curWord)){
-                    if(word.equals(endWord))
-                        return curStep + 1;
-                    q.addLast(new Pair<>(word, curStep + 1));
-                    visited.add(word);
-                }
-            }
-
-            for(String word: visited)
-                wordSet.remove(word);
+      visited.clear();
+      for (String word : wordSet) {
+        if (similar(word, curWord)) {
+          if (word.equals(endWord)) return curStep + 1;
+          q.addLast(new Pair<>(word, curStep + 1));
+          visited.add(word);
         }
+      }
 
-        return 0;
+      for (String word : visited) wordSet.remove(word);
     }
 
-    private boolean similar(String word1, String word2){
+    return 0;
+  }
 
-        if(word1.length() != word2.length() || word1.equals(word2))
-            throw new IllegalArgumentException();
+  private boolean similar(String word1, String word2) {
 
-        int diff = 0;
-        for(int i = 0 ; i < word1.length() ; i ++)
-            if(word1.charAt(i) != word2.charAt(i)){
-                diff ++;
-                if(diff > 1)
-                    return false;
-            }
-        return true;
-    }
+    if (word1.length() != word2.length() || word1.equals(word2))
+      throw new IllegalArgumentException();
 
-    public static void main(String[] args) {
+    int diff = 0;
+    for (int i = 0; i < word1.length(); i++)
+      if (word1.charAt(i) != word2.charAt(i)) {
+        diff++;
+        if (diff > 1) return false;
+      }
+    return true;
+  }
 
-        ArrayList<String> wordList1 = new ArrayList<String>(
-                Arrays.asList("hot","dot","dog","lot","log","cog"));
-        String beginWord1 = "hit";
-        String endWord1 = "cog";
-        System.out.println((new Solution()).ladderLength(beginWord1, endWord1, wordList1));
+  public static void main(String[] args) {
 
-        // 5
+    ArrayList<String> wordList1 =
+        new ArrayList<String>(Arrays.asList("hot", "dot", "dog", "lot", "log", "cog"));
+    String beginWord1 = "hit";
+    String endWord1 = "cog";
+    System.out.println((new Solution()).ladderLength(beginWord1, endWord1, wordList1));
 
-        // ---
+    // 5
 
-        ArrayList<String> wordList2 = new ArrayList<String>(
-                Arrays.asList("a","b","c"));
-        String beginWord2 = "a";
-        String endWord2 = "c";
-        System.out.println((new Solution()).ladderLength(beginWord2, endWord2, wordList2));
-        // 2
-    }
+    // ---
+
+    ArrayList<String> wordList2 = new ArrayList<String>(Arrays.asList("a", "b", "c"));
+    String beginWord2 = "a";
+    String endWord2 = "c";
+    System.out.println((new Solution()).ladderLength(beginWord2, endWord2, wordList2));
+    // 2
+  }
 }

@@ -1,4 +1,5 @@
-package com.jd.lee.L06StackandQueue.Optional04BinaryTreeMorrisTraversal.src;/// Source : https://leetcode.com/problems/binary-tree-preorder-traversal/description/
+package com.jd.lee.L06StackandQueue.Optional04BinaryTreeMorrisTraversal.src; /// Source :
+                                                                             // https://leetcode.com/problems/binary-tree-preorder-traversal/description/
 /// Author : liuyubobobo
 /// Time   : 2018-05-29
 
@@ -10,35 +11,31 @@ import java.util.List;
 // Space Complexity: O(1)
 public class PreorderSolution {
 
-    public List<Integer> preorderTraversal(TreeNode root) {
+  public List<Integer> preorderTraversal(TreeNode root) {
 
-        ArrayList<Integer> res = new ArrayList<Integer>();
-        if(root == null)
-            return res;
+    ArrayList<Integer> res = new ArrayList<Integer>();
+    if (root == null) return res;
 
-        TreeNode cur = root;
-        while(cur != null){
-            if(cur.left == null){
-                res.add(cur.val);
-                cur = cur.right;
-            }
-            else{
-                TreeNode prev = cur.left;
-                while(prev.right != null && prev.right != cur)
-                    prev = prev.right;
+    TreeNode cur = root;
+    while (cur != null) {
+      if (cur.left == null) {
+        res.add(cur.val);
+        cur = cur.right;
+      } else {
+        TreeNode prev = cur.left;
+        while (prev.right != null && prev.right != cur) prev = prev.right;
 
-                if(prev.right == null){
-                    res.add(cur.val);
-                    prev.right = cur;
-                    cur = cur.left;
-                }
-                else{
-                    prev.right = null;
-                    cur = cur.right;
-                }
-            }
+        if (prev.right == null) {
+          res.add(cur.val);
+          prev.right = cur;
+          cur = cur.left;
+        } else {
+          prev.right = null;
+          cur = cur.right;
         }
-
-        return res;
+      }
     }
+
+    return res;
+  }
 }

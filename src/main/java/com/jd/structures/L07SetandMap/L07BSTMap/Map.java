@@ -2,17 +2,17 @@ package com.jd.structures.L07SetandMap.L07BSTMap;
 
 public interface Map<K, V> {
 
-    void add(K key, V value);
+  void add(K key, V value);
 
-    boolean contains(K key);
+  boolean contains(K key);
 
-    V get(K key);
+  V get(K key);
 
-    void set(K key, V value);
+  void set(K key, V value);
 
-    V remove(K key);
+  V remove(K key);
 
-    int getSize();
+  int getSize();
 
-    boolean isEmpty();
+  boolean isEmpty();
 }

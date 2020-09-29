@@ -2,13 +2,13 @@ package com.jd.structures.L10Trie.L04PrefixinTrie;
 
 public interface Set<E> {
 
-    void add(E e);
+  void add(E e);
 
-    boolean contains(E e);
+  boolean contains(E e);
 
-    void remove(E e);
+  void remove(E e);
 
-    int getSize();
+  int getSize();
 
-    boolean isEmpty();
+  boolean isEmpty();
 }
