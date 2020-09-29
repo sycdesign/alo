@@ -1,10 +1,7 @@
 package com.jd.structures.L12AVLTree.L06LRandRL;
 
-// 14HashTable.L05HashTableImplementation.AVLTree;
-// 14HashTable.L05HashTableImplementation.BST;
-// 14HashTable.L05HashTableImplementation.FileOperation;
-
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Main {
 
@@ -16,18 +13,23 @@ public class Main {
     if (FileOperation.readFile("src/main/resources/pride-and-prejudice.txt", words)) {
       System.out.println("Total words: " + words.size());
 
-      // Collections.sort(words);
+      Collections.sort(words);
 
       // Test BST
       long startTime = System.nanoTime();
 
       BST<String, Integer> bst = new BST<>();
       for (String word : words) {
-        if (bst.contains(word)) bst.set(word, bst.get(word) + 1);
-        else bst.add(word, 1);
+        if (bst.contains(word)) {
+          bst.set(word, bst.get(word) + 1);
+        } else {
+          bst.add(word, 1);
+        }
       }
 
-      for (String word : words) bst.contains(word);
+      for (String word : words) {
+        bst.contains(word);
+      }
 
       long endTime = System.nanoTime();
 
@@ -39,11 +41,16 @@ public class Main {
 
       AVLTree<String, Integer> avl = new AVLTree<>();
       for (String word : words) {
-        if (avl.contains(word)) avl.set(word, avl.get(word) + 1);
-        else avl.add(word, 1);
+        if (avl.contains(word)) {
+          avl.set(word, avl.get(word) + 1);
+        } else {
+          avl.add(word, 1);
+        }
       }
 
-      for (String word : words) avl.contains(word);
+      for (String word : words) {
+        avl.contains(word);
+      }
 
       endTime = System.nanoTime();
 

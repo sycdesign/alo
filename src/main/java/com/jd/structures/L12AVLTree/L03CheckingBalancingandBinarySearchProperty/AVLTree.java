@@ -1,7 +1,5 @@
 package com.jd.structures.L12AVLTree.L03CheckingBalancingandBinarySearchProperty;
 
-// 14HashTable.L05HashTableImplementation.FileOperation;
-
 import java.util.ArrayList;
 
 public class AVLTree<K extends Comparable<K>, V> {
@@ -97,17 +95,23 @@ public class AVLTree<K extends Comparable<K>, V> {
       return new Node(key, value);
     }
 
-    if (key.compareTo(node.key) < 0) node.left = add(node.left, key, value);
-    else if (key.compareTo(node.key) > 0) node.right = add(node.right, key, value);
-    else // key.compareTo(node.key) == 0
-    node.value = value;
+    if (key.compareTo(node.key) < 0) {
+      node.left = add(node.left, key, value);
+    } else if (key.compareTo(node.key) > 0) {
+      node.right = add(node.right, key, value);
+    } else {
+      // key.compareTo(node.key) == 0
+      node.value = value;
+    }
 
     // 更新height
     node.height = 1 + Math.max(getHeight(node.left), getHeight(node.right));
 
     // 计算平衡因子
     int balanceFactor = getBalanceFactor(node);
-    if (Math.abs(balanceFactor) > 1) System.out.println("unbalanced : " + balanceFactor);
+    if (Math.abs(balanceFactor) > 1) {
+      System.out.println("unbalanced : " + balanceFactor);
+    }
 
     return node;
   }
@@ -115,12 +119,18 @@ public class AVLTree<K extends Comparable<K>, V> {
   // 返回以node为根节点的二分搜索树中，key所在的节点
   private Node getNode(Node node, K key) {
 
-    if (node == null) return null;
+    if (node == null) {
+      return null;
+    }
 
-    if (key.equals(node.key)) return node;
-    else if (key.compareTo(node.key) < 0) return getNode(node.left, key);
-    else // if(key.compareTo(node.key) > 0)
-    return getNode(node.right, key);
+    if (key.equals(node.key)) {
+      return node;
+    } else if (key.compareTo(node.key) < 0) {
+      return getNode(node.left, key);
+    } else {
+      // if(key.compareTo(node.key) > 0)
+      return getNode(node.right, key);
+    }
   }
 
   public boolean contains(K key) {
