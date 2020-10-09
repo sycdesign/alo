@@ -1,4 +1,4 @@
-package com.jd.lee.L06StackandQueue.L02RecursionandStack.src;
+package com.jd.lee.L06StackandQueue.L02RecursionandStack;
 
 import java.util.ArrayList;
 import java.util.List;

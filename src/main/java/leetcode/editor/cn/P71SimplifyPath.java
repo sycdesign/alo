@@ -49,17 +49,39 @@
 // 👍 195 👎 0
 
 package leetcode.editor.cn;
+
+import java.util.Stack;
+
 // Java：简化路径
 public class P71SimplifyPath {
   public static void main(String[] args) {
     Solution solution = new P71SimplifyPath().new Solution();
+    solution.simplifyPath("/../");
     // TO TEST
   }
   // leetcode submit region begin(Prohibit modification and deletion)
   class Solution {
     public String simplifyPath(String path) {
+      String[] s = path.split("/");
+      Stack<String> stack = new Stack<>();
 
-      return "";
+      for(String p : s){
+        if (!stack.isEmpty() && "..".equals(p)){
+          stack.pop();
+        }else if (!"".equals(p) && !".".equals(p) && !"..".equals(p)) {
+          stack.push(p);
+        }
+      }
+
+      if (stack.isEmpty()){
+        return "/";
+      }
+
+      StringBuffer res = new StringBuffer();
+      for (int i = 0; i < stack.size(); i++) {
+        res.append("/" + stack.get(i));
+      }
+      return res.toString();
     }
   }
   // leetcode submit region end(Prohibit modification and deletion)

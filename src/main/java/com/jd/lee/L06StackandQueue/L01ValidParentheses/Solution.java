@@ -1,4 +1,4 @@
-package com.jd.lee.L06StackandQueue.L01ValidParentheses.src;
+package com.jd.lee.L06StackandQueue.L01ValidParentheses;
 
 import java.util.Stack;
 
@@ -6,6 +6,11 @@ import java.util.Stack;
 // https://leetcode.com/problems/valid-parentheses/description/
 // 时间复杂度: O(n)
 // 空间复杂度: O(n)
+
+/**
+ * 相类似问题 150
+ * 71
+ */
 public class Solution {
 
   public boolean isValid(String s) {
