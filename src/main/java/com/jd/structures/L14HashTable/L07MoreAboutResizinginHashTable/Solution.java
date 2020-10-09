@@ -1,6 +1,6 @@
 package com.jd.structures.L14HashTable.L07MoreAboutResizinginHashTable; /// Leetcode 350.
-                                                                        // Intersection of Two
-                                                                        // Arrays II
+// Intersection of Two
+// Arrays II
 /// https://leetcode.com/problems/intersection-of-two-arrays-ii/description/
 ///
 /// 课程中在这里暂时没有介绍这个问题

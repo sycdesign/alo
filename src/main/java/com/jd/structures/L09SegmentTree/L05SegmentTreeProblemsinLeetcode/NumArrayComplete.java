@@ -1,5 +1,5 @@
 package com.jd.structures.L09SegmentTree.L05SegmentTreeProblemsinLeetcode; /// 303. Range Sum Query
-                                                                           // - Immutable
+// - Immutable
 /// https://leetcode.com/problems/range-sum-query-immutable/description/
 
 class NumArrayComplete {

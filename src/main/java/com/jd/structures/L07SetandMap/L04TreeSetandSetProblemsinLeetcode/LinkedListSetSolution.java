@@ -1,5 +1,5 @@
 package com.jd.structures.L07SetandMap.L04TreeSetandSetProblemsinLeetcode; // Leetcode 804. Unique
-                                                                           // Morse Code Words
+// Morse Code Words
 // https://leetcode.com/problems/unique-morse-code-words/description/
 
 public class LinkedListSetSolution {

@@ -97,10 +97,9 @@ public class AVLTree<K extends Comparable<K>, V> {
     } else if (key.compareTo(node.key) < 0) {
       return getNode(node.left, key);
     } else {
-//      if(key.compareTo(node.key) > 0)
+      //      if(key.compareTo(node.key) > 0)
       return getNode(node.right, key);
     }
-
   }
 
   public boolean contains(K key) {

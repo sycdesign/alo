@@ -1,6 +1,6 @@
 package com.jd.lee.L06StackandQueue.Optional03ClassicNonRecursivePostorderTraversal.src; /// Source
-                                                                                         // :
-                                                                                         // https://leetcode.com/problems/binary-tree-postorder-traversal/description/
+// :
+// https://leetcode.com/problems/binary-tree-postorder-traversal/description/
 /// Author : liuyubobobo
 /// Time   : 2018-05-30
 

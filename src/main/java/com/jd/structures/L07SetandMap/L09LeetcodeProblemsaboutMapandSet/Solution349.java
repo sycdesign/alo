@@ -1,6 +1,6 @@
 package com.jd.structures.L07SetandMap.L09LeetcodeProblemsaboutMapandSet; /// Leetcode 349.
-                                                                          // Intersection of Two
-                                                                          // Arrays
+// Intersection of Two
+// Arrays
 /// https://leetcode.com/problems/intersection-of-two-arrays/description/
 
 import java.util.ArrayList;

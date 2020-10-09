@@ -1,5 +1,5 @@
 package com.jd.structures.L05Recursion.L04LinkedListandRecursion; /// Leetcode 203. Remove Linked
-                                                                  // List Elements
+// List Elements
 /// https://leetcode.com/problems/remove-linked-list-elements/description/
 
 class Solution2 {

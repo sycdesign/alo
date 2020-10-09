@@ -1,5 +1,5 @@
 package com.jd.algorithm.L05BinarySearchTree.java.LOptional10BinaryTreeMorrisTraversal; /// Source :
-                                                                                        // https://leetcode.com/problems/binary-tree-postorder-traversal/description/
+// https://leetcode.com/problems/binary-tree-postorder-traversal/description/
 /// Author : liuyubobobo
 /// Time   : 2018-05-31
 

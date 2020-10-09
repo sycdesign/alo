@@ -65,15 +65,15 @@ public class P71SimplifyPath {
       String[] s = path.split("/");
       Stack<String> stack = new Stack<>();
 
-      for(String p : s){
-        if (!stack.isEmpty() && "..".equals(p)){
+      for (String p : s) {
+        if (!stack.isEmpty() && "..".equals(p)) {
           stack.pop();
-        }else if (!"".equals(p) && !".".equals(p) && !"..".equals(p)) {
+        } else if (!"".equals(p) && !".".equals(p) && !"..".equals(p)) {
           stack.push(p);
         }
       }
 
-      if (stack.isEmpty()){
+      if (stack.isEmpty()) {
         return "/";
       }
 

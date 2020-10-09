@@ -1,5 +1,5 @@
 package com.jd.structures.L06BinarySearchTree.LOptional05BinaryTreeMorrisTraversal; /// Source :
-                                                                                    // https://leetcode.com/problems/binary-tree-inorder-traversal/solution/
+// https://leetcode.com/problems/binary-tree-inorder-traversal/solution/
 /// Author : liuyubobobo
 /// Time   : 2018-05-30
 

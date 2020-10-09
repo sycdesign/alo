@@ -14,7 +14,8 @@ public class Main {
 
     ArrayList<String> words = new ArrayList<>();
     if (FileOperation.readFile(
-        "D:\\code\\data-structure\\alo\\src\\main\\resources\\src/main/resources/pride-and-prejudice.txt", words)) {
+        "D:\\code\\data-structure\\alo\\src\\main\\resources\\src/main/resources/pride-and-prejudice.txt",
+        words)) {
 
       long startTime = System.nanoTime();
 

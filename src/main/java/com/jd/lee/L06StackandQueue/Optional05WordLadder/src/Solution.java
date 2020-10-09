@@ -1,5 +1,5 @@
 package com.jd.lee.L06StackandQueue.Optional05WordLadder.src; /// Source :
-                                                              // https://leetcode.com/problems/word-ladder/description/
+// https://leetcode.com/problems/word-ladder/description/
 /// Author : liuyubobobo
 /// Time   : 2018-03-27
 

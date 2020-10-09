@@ -1,5 +1,5 @@
 package com.jd.lee.L06StackandQueue.Optional04BinaryTreeMorrisTraversal.src; /// Source :
-                                                                             // https://leetcode.com/problems/binary-tree-preorder-traversal/description/
+// https://leetcode.com/problems/binary-tree-preorder-traversal/description/
 /// Author : liuyubobobo
 /// Time   : 2018-05-29
 

@@ -1,6 +1,5 @@
 package com.jd.structures.L12AVLTree.L06LRandRL;
 
-
 import java.util.ArrayList;
 
 public class AVLTree<K extends Comparable<K>, V> {
@@ -155,16 +154,14 @@ public class AVLTree<K extends Comparable<K>, V> {
       return new Node(key, value);
     }
 
-    if (key.compareTo(node.key) < 0){
+    if (key.compareTo(node.key) < 0) {
       node.left = add(node.left, key, value);
-    }
-    else if (key.compareTo(node.key) > 0) {
+    } else if (key.compareTo(node.key) > 0) {
       node.right = add(node.right, key, value);
-    } else{
+    } else {
       // key.compareTo(node.key) == 0
       node.value = value;
     }
-
 
     // 更新height
     node.height = 1 + Math.max(getHeight(node.left), getHeight(node.right));

@@ -1,5 +1,5 @@
 package com.jd.structures.L12AVLTree.L07RemoveElementsinAVLTree; /// Leetcode 350. Intersection of
-                                                                 // Two Arrays II
+// Two Arrays II
 /// https://leetcode.com/problems/intersection-of-two-arrays-ii/description/
 ///
 /// 课程中在这里暂时没有介绍这个问题

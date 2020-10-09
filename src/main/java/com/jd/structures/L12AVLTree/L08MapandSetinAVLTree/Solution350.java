@@ -1,5 +1,5 @@
 package com.jd.structures.L12AVLTree.L08MapandSetinAVLTree; /// Leetcode 350. Intersection of Two
-                                                            // Arrays II
+// Arrays II
 /// https://leetcode.com/problems/intersection-of-two-arrays-ii/description/
 
 import java.util.ArrayList;

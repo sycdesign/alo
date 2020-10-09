@@ -7,10 +7,7 @@ import java.util.Stack;
 // 时间复杂度: O(n)
 // 空间复杂度: O(n)
 
-/**
- * 相类似问题 150
- * 71
- */
+/** 相类似问题 150 71 */
 public class Solution {
 
   public boolean isValid(String s) {

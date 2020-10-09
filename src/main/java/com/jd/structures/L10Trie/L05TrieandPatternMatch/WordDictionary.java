@@ -1,5 +1,5 @@
 package com.jd.structures.L10Trie.L05TrieandPatternMatch; /// Leetcode 211. Add and Search Word -
-                                                          // Data structure design
+// Data structure design
 /// https://leetcode.com/problems/add-and-search-word-data-structure-design/description/
 
 import java.util.TreeMap;

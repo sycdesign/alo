@@ -1,5 +1,5 @@
 package com.jd.structures.L06BinarySearchTree.LOptional05BinaryTreeMorrisTraversal; /// Source :
-                                                                                    // https://leetcode.com/problems/binary-tree-preorder-traversal/description/
+// https://leetcode.com/problems/binary-tree-preorder-traversal/description/
 /// Author : liuyubobobo
 /// Time   : 2018-05-29
 
