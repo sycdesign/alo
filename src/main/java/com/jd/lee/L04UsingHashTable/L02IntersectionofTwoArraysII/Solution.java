@@ -43,7 +43,7 @@ public class Solution {
 
         int[] nums1 = {1, 2, 2, 1};
         int[] nums2 = {2, 2};
-        int[] res = (new com.jd.lee.L04UsingHashTable.L01IntersectionofTwoArrays.Solution()).intersect(nums1, nums2);
+        int[] res = (new Solution()).intersect(nums1, nums2);
         printArr(res);
     }
 }
