@@ -31,8 +31,15 @@ public class ListNode {
 }
 class Solution {
     public ListNode deleteDuplicates(ListNode head) {
-
-        return null;
+      ListNode current = head;
+      while (null != current && null != current.next){
+        if (current.val == current.next.val){
+          current.next = current.next.next;
+        }else{
+          current = current.next;
+        }
+      }
+        return head;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
