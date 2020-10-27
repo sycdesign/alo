@@ -18,15 +18,23 @@ public class Solution1 {
     }
 
     int index = 0;
-    for (int i = 0; i < count[0]; i++) nums[index++] = 0;
-    for (int i = 0; i < count[1]; i++) nums[index++] = 1;
-    for (int i = 0; i < count[2]; i++) nums[index++] = 2;
+    for (int i = 0; i < count[0]; i++) {
+      nums[index++] = 0;
+    }
+    for (int i = 0; i < count[1]; i++) {
+      nums[index++] = 1;
+    }
+    for (int i = 0; i < count[2]; i++) {
+      nums[index++] = 2;
+    }
 
     // 小练习: 自学编写计数排序算法
   }
 
   public static void printArr(int[] nums) {
-    for (int num : nums) System.out.print(num + " ");
+    for (int num : nums) {
+      System.out.print(num + " ");
+    }
     System.out.println();
   }
 
