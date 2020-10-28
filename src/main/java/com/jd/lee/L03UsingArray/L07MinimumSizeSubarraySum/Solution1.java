@@ -11,17 +11,26 @@ public class Solution1 {
 
   public int minSubArrayLen(int s, int[] nums) {
 
-    if (s <= 0 || nums == null) throw new IllegalArgumentException("Illigal Arguments");
+    if (s <= 0 || nums == null) {
+      throw new IllegalArgumentException("Illigal Arguments");
+    }
 
     int res = nums.length + 1;
-    for (int l = 0; l < nums.length; l++)
+    for (int l = 0; l < nums.length; l++) {
       for (int r = l; r < nums.length; r++) {
         int sum = 0;
-        for (int i = l; i <= r; i++) sum += nums[i];
-        if (sum >= s) res = Math.min(res, r - l + 1);
+        for (int i = l; i <= r; i++) {
+          sum += nums[i];
+        }
+        if (sum >= s) {
+          res = Math.min(res, r - l + 1);
+        }
       }
+    }
 
-    if (res == nums.length + 1) return 0;
+    if (res == nums.length + 1) {
+      return 0;
+    }
 
     return res;
   }

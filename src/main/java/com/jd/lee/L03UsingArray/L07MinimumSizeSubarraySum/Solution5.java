@@ -12,12 +12,16 @@ public class Solution5 {
 
   public int minSubArrayLen(int s, int[] nums) {
 
-    if (s <= 0 || nums == null) throw new IllegalArgumentException("Illigal Arguments");
+    if (s <= 0 || nums == null) {
+      throw new IllegalArgumentException("Illigal Arguments");
+    }
 
     // sums[i]存放nums[0...i-1]的和
     int[] sums = new int[nums.length + 1];
     sums[0] = 0;
-    for (int i = 1; i <= nums.length; i++) sums[i] = sums[i - 1] + nums[i - 1];
+    for (int i = 1; i <= nums.length; i++) {
+      sums[i] = sums[i - 1] + nums[i - 1];
+    }
 
     int res = nums.length + 1;
     for (int l = 0; l < nums.length; l++) {
@@ -29,7 +33,9 @@ public class Solution5 {
       }
     }
 
-    if (res == nums.length + 1) return 0;
+    if (res == nums.length + 1) {
+      return 0;
+    }
     return res;
   }
 
@@ -37,21 +43,29 @@ public class Solution5 {
   // 如果没有（nums数组中所有值都小于target），则返回nums.length
   private int lowerBound(int[] nums, int target) {
 
-    if (nums == null /*|| !isSorted(nums)*/)
+    if (nums == null /*|| !isSorted(nums)*/) {
       throw new IllegalArgumentException("Illegal argument nums in lowerBound.");
+    }
 
     int l = 0, r = nums.length; // 在nums[l...r)的范围里寻找解
     while (l != r) {
       int mid = l + (r - l) / 2;
-      if (nums[mid] >= target) r = mid;
-      else l = mid + 1;
+      if (nums[mid] >= target) {
+        r = mid;
+      } else {
+        l = mid + 1;
+      }
     }
 
     return l;
   }
 
   private boolean isSorted(int[] nums) {
-    for (int i = 1; i < nums.length; i++) if (nums[i] < nums[i - 1]) return false;
+    for (int i = 1; i < nums.length; i++) {
+      if (nums[i] < nums[i - 1]) {
+        return false;
+      }
+    }
     return true;
   }
 

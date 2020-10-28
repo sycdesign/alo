@@ -19,9 +19,12 @@ class Solution1 {
     // 在每次循环里逐渐改变窗口, 维护freq, 并记录当前窗口中是否找到了一个新的最优值
     while (l < s.length()) {
 
-      if (r + 1 < s.length() && freq[s.charAt(r + 1)] == 0) freq[s.charAt(++r)]++;
-      else // r已经到头 || freq[s[r+1]] == 1
-      freq[s.charAt(l++)]--;
+      if (r + 1 < s.length() && freq[s.charAt(r + 1)] == 0) {
+        freq[s.charAt(++r)]++;
+      } else // r已经到头 || freq[s[r+1]] == 1
+      {
+        freq[s.charAt(l++)]--;
+      }
 
       res = Math.max(res, r - l + 1);
     }
