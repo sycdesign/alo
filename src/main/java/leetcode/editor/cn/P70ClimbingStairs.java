@@ -30,14 +30,28 @@ package leetcode.editor.cn;
 public class P70ClimbingStairs {
   public static void main(String[] args) {
     Solution solution = new P70ClimbingStairs().new Solution();
+    solution.climbStairs(3);
     // TO TEST
   }
 
   // leetcode submit region begin(Prohibit modification and deletion)
   class Solution {
     public int climbStairs(int n) {
+      if (n <= 0) return 0;
+      if (n == 1) return 1;
+      if (n == 2) return 2;
 
-      return 0;
+      int oneStepBefore = 2;
+      int twoStepsBefore = 1;
+      int allWays = 0;
+
+      for (int i = 2; i<n; i++){
+        allWays = oneStepBefore + twoStepsBefore;
+        twoStepsBefore = oneStepBefore;
+        oneStepBefore = allWays;
+      }
+
+      return allWays;
     }
   }
   // leetcode submit region end(Prohibit modification and deletion)

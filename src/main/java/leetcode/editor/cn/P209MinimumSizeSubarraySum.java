@@ -30,8 +30,15 @@ public class P209MinimumSizeSubarraySum{
     //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public int minSubArrayLen(int s, int[] nums) {
-
-        return 0;
+        int lo = 0, hi = 0, sum = 0, min = Integer.MAX_VALUE;
+        while (hi < nums.length) {
+            sum += nums[hi++];
+            while (sum >= s) {
+                min = Math.min(min, hi - lo);
+                sum -= nums[lo++];
+            }
+        }
+        return min == Integer.MAX_VALUE ? 0 : min;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

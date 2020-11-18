@@ -111,7 +111,7 @@ public class IndexMaxHeap<Item extends Comparable> {
 
     // 找到indexes[j] = i, j表示data[i]在堆中的位置
     // 之后shiftUp(j), 再shiftDown(j)
-    //        for( int j = 1 ; j <= count ; j ++ )
+    //        for( int j = 1 ; j <= T ; j ++ )
     //            if( indexes[j] == i ){
     //                shiftUp(j);
     //                shiftDown(j);

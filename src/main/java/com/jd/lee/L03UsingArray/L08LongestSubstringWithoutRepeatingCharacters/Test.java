@@ -5,7 +5,7 @@ package com.jd.lee.L03UsingArray.L08LongestSubstringWithoutRepeatingCharacters;
  * @date: 2020/10/28 15:20:25
  * @description: Test
  */
-public class Test {
+public class Test implements Runnable{
   public static void main(String[] args) {
 
     //test1();
@@ -13,6 +13,8 @@ public class Test {
     //test2();
 
     //test3();
+    Thread thread = new Thread(new Test());
+
   }
 
   private static void test3() {
@@ -36,5 +38,10 @@ public class Test {
     System.out.println("i = " + i);
     //System.out.println("a = " + a);
     //System.out.println("b = " + b);
+  }
+
+  @Override
+  public void run() {
+    System.out.println("使用runnable创建线程");
   }
 }

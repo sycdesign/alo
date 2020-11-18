@@ -27,12 +27,24 @@ public class P125ValidPalindrome{
     //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public boolean isPalindrome(String s) {
-        char[] chars = s.toLowerCase().toCharArray();
-
-        for (char c : chars){
-            Character.isLetterOrDigit(c);
+        StringBuffer sgood = new StringBuffer();
+        int length = s.length();
+        for (int i = 0; i < length; i++) {
+            char ch = s.charAt(i);
+            if (Character.isLetterOrDigit(ch)) {
+                sgood.append(Character.toLowerCase(ch));
+            }
         }
-        return false;
+        int n = sgood.length();
+        int left = 0, right = n - 1;
+        while (left < right) {
+            if (Character.toLowerCase(sgood.charAt(left)) != Character.toLowerCase(sgood.charAt(right))) {
+                return false;
+            }
+            ++left;
+            --right;
+        }
+        return true;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

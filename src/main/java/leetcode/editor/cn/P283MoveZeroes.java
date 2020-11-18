@@ -16,9 +16,6 @@
 
 package leetcode.editor.cn;
 
-import java.util.ArrayList;
-import java.util.List;
-
 // Java：移动零
 public class P283MoveZeroes {
   public static void main(String[] args) {
