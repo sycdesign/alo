@@ -1,8 +1,9 @@
-package com.jd.concurrency.example.count;
+package com.jd.concurrency.example.commonUnsafe;
 
 import com.jd.concurrency.annoations.ThreadSafe;
 import lombok.extern.slf4j.Slf4j;
 
+import java.text.SimpleDateFormat;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -10,15 +11,13 @@ import java.util.concurrent.Semaphore;
 
 @Slf4j
 @ThreadSafe
-public class CountExample3 {
+public class DateFormatExample2 {
 
     // 请求总数
     public static int clientTotal = 5000;
 
     // 同时并发执行的线程数
     public static int threadTotal = 200;
-
-    public static int count = 0;
 
     public static void main(String[] args) throws Exception {
         ExecutorService executorService = Executors.newCachedThreadPool();
@@ -28,7 +27,7 @@ public class CountExample3 {
             executorService.execute(() -> {
                 try {
                     semaphore.acquire();
-                    add();
+                    update();
                     semaphore.release();
                 } catch (Exception e) {
                     log.error("exception", e);
@@ -38,10 +37,14 @@ public class CountExample3 {
         }
         countDownLatch.await();
         executorService.shutdown();
-        log.info("count:{}", count);
     }
 
-    private synchronized static void add() {
-        count++;
+    private static void update() {
+        try {
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
+            simpleDateFormat.parse("20180208");
+        } catch (Exception e) {
+            log.error("parse exception", e);
+        }
     }
 }
