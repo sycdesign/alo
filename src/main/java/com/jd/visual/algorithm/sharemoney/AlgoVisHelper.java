@@ -1,9 +1,11 @@
-package com.jd.visual.algorithm;
+package com.jd.visual.algorithm.sharemoney;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
+import java.awt.Shape;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Ellipse2D.Double;
+import java.awt.geom.Rectangle2D;
 
 /**
  * @author: gaohongbin5
@@ -39,5 +41,10 @@ public class AlgoVisHelper {
     } catch (InterruptedException e) {
       e.printStackTrace();
     }
+  }
+
+  public static void fillRectangle(Graphics2D g2d, int x, int y, int w, int h) {
+    Shape shape = new Rectangle2D.Double(x,y,w,h);
+    g2d.fill(shape);
   }
 }

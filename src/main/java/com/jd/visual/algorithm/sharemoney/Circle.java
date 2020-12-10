@@ -1,4 +1,4 @@
-package com.jd.visual.algorithm;
+package com.jd.visual.algorithm.sharemoney;
 
 /**
  * @author: gaohongbin5
