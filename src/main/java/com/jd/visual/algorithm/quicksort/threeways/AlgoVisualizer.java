@@ -37,13 +37,13 @@ public class AlgoVisualizer {
   private  void  run(){
 
     setData(-1, -1, -1, -1, -1, -1);
-    quickSort2Ways(0, data.N()-1);
+    quickSort3Ways(0, data.N()-1);
   }
 
   private void setData(int i, int i1, int i2, int i3, int i4, int i5) {
   }
 
-  private void quickSort2Ways(int l, int r){
+  private void quickSort3Ways(int l, int r){
 
     if (l > r){
       return;
@@ -52,40 +52,15 @@ public class AlgoVisualizer {
       return;
     }
 
-    int p = partition(l, r);
-    quickSort2Ways(l, p-1);
-    quickSort2Ways(p+1, r);
-
-  }
-
-  private int partition(int l, int r) {
     int p = (int)(Math.random()* (r-l +1)) + l;
     data.swap(l,p);
     int v = data.get(l);
 
-    //arr[l+1...i) <= v; arr(j...r] >= v
-    int i = l+1,j = r;
-    while (true){
-      while ( i <= r && data.get(i) < v){
-        i++;
-      }
+    //三路快排 partition
+    quickSort3Ways(l, p-1);
+    quickSort3Ways(p+1, r);
 
-      while ( j >= l+1 && data.get(j) > v){
-        j--;
-      }
-
-      if (i > j){
-        break;
-      }
-
-      data.swap(i, j);
-      i++;
-      j--;
-    }
-    data.swap(l,j);
-    return j;
   }
-
 
   private class AlgoKeyListener extends KeyAdapter {
 
