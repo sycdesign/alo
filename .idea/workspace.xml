@@ -7,24 +7,20 @@
     <bookmark url="jar://$PROJECT_DIR$/../../../java/jdk/src.zip!/java/lang/StringCoding.java" description="SoftReference&lt;T&gt; sr = tl.get();" line="62" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5b51985-bc89-4680-bd6e-df0f45ea6417" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jd/lee/j0022/Solution1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jd/lee/j0070/Solution1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jd/lee/j0070/Solution2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jd/lee/j0070/Solution3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jd/lee/j0098/Solution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jd/lee/j0098/Solution2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jd/lee/j0098/Solution3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jd/lee/j0098/Solution4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jd/lee/j0098/Solution5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jd/lee/j0098/TreeNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jd/lee/j0104/MaxDepthSolution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jd/lee/j0104/Solution1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jd/lee/j0226/Solution1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jd/lee/j0297/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/all.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/all.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/translation.json" afterDir="false" />
+    <list default="true" id="a5b51985-bc89-4680-bd6e-df0f45ea6417" name="Default Changelist" comment="feat:tree">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jd/lee/j0046/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jd/lee/j0047/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jd/lee/j0077/Solution1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jd/lee/j0077/Solution2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jd/lee/j0077/Solution3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jd/lee/j0077/Solution4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jd/lee/j0077/Solution5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jd/lee/j0105/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jd/lee/j0111/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jd/lee/j0297/Main2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jd/lee/j0297/Main3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jd/lee/j0297/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jd/lee/j0297/Main.java" afterDir="false" />
     </list>
     <list id="cba9ca91-b46e-47e8-b07a-9ee5a73698f3" name="idea" comment="idea">
       <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
@@ -319,43 +315,71 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1607689905477" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/jd/lee/j0098" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/jd/lee/j0077" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.37128204" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.jd.visual.algorithm" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\code\data-structure\alo\src\main\java\com\jd\lee\j0077" />
       <recent name="D:\code\data-structure\alo\src\main\java\com\jd\lee\j0098" />
       <recent name="D:\code\data-structure\alo" />
       <recent name="D:\code\data-structure\alo\src\main\java\com\jd\visual\algorithm\maze\l02visualization" />
       <recent name="D:\code\data-structure\alo\src\main\java\com\jd\visual\algorithm\quicksort\threeways" />
-      <recent name="D:\code\data-structure\alo\src\main\java\com\jd\concurrencycore" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\code\data-structure\alo\src\main\resources" />
       <recent name="D:\code\data-structure\alo\src\main\java\com\jd\structures\L07SetandMap\L01SetBasicAndBSTSet" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.jd.lee.j0047" />
+      <recent name="com.jd.lee.j0297" />
       <recent name="com.jd.visual.algorithm.quicksort.twoways" />
       <recent name="com.jd.concurrency.example.uncatchexception" />
       <recent name="com.jd.concurrency.example.concurrent" />
-      <recent name="com.jd.concurrency.example.synccontainer" />
-      <recent name="com.jd.concurrency.example.common.unsafe" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Main (2)">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jd.lee.j0046.Main" />
+      <module name="alo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jd.lee.j0046.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jd.lee.j0047.Main" />
+      <module name="alo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jd.lee.j0047.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jd.lee.j0297.Main" />
       <module name="alo" />
@@ -369,12 +393,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Solution1 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jd.lee.j0022.Solution1" />
+    <configuration name="Main2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jd.lee.j0297.Main2" />
       <module name="alo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.jd.lee.j0022.*" />
+          <option name="PATTERN" value="com.jd.lee.j0297.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -382,38 +406,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Solution1 (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jd.lee.j0226.Solution1" />
+    <configuration name="Main3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jd.lee.j0297.Main3" />
       <module name="alo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.jd.lee.j0226.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Solution1 (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jd.lee.j0104.Solution1" />
-      <module name="alo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jd.lee.j0104.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Solution3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jd.lee.j0070.Solution3" />
-      <module name="alo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jd.lee.j0070.*" />
+          <option name="PATTERN" value="com.jd.lee.j0297.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -485,19 +483,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.Solution3" />
-      <item itemvalue="Application.Solution1 (1)" />
-      <item itemvalue="Application.Solution1 (2)" />
-      <item itemvalue="Application.Solution1 (3)" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Main2" />
+      <item itemvalue="Application.Main3" />
+      <item itemvalue="Application.Main (1)" />
+      <item itemvalue="Application.Main (2)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (2)" />
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main3" />
+        <item itemvalue="Application.Main2" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Solution1 (3)" />
-        <item itemvalue="Application.Solution1 (2)" />
-        <item itemvalue="Application.Solution1 (1)" />
-        <item itemvalue="Application.Solution3" />
       </list>
     </recent_temporary>
   </component>
@@ -833,7 +831,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607677441567</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="feat:tree">
+      <created>1615536877817</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1615536877818</updated>
+    </task>
+    <task id="LOCAL-00042" summary="feat:tree">
+      <created>1615536998339</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1615536998339</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -936,10 +948,10 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="feat: format dy" />
     <MESSAGE value="stack and queue" />
     <MESSAGE value="feat: P128" />
     <MESSAGE value="feat: formart code use google code style" />
@@ -964,7 +976,8 @@
     <MESSAGE value="feat:sharemoney" />
     <MESSAGE value="feat:two ways quick sort visualizer" />
     <MESSAGE value="feat:maze visual" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat:maze visual" />
+    <MESSAGE value="feat:tree" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:tree" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1098,6 +1111,16 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/jd/lee/j0226/Solution1.java</url>
           <line>21</line>
           <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jd/lee/j0297/Main2.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jd/lee/j0297/Main2.java</url>
+          <line>94</line>
+          <option name="timeStamp" value="56" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
