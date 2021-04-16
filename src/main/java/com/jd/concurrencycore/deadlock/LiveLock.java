@@ -1,7 +1,6 @@
 package com.jd.concurrencycore.deadlock;
 
 import java.util.Random;
-import jdk.management.resource.internal.inst.RandomAccessFileRMHooks;
 
 /**
  * 描述：     演示活锁问题
